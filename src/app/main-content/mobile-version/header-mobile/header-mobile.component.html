@@ -1,0 +1,23 @@
+<header>
+
+    <div>
+    <img class="logo"  src="assets/img/logo.png" alt="">
+
+
+
+    <img class="menu-img" src="assets/img/Property 1=default.png" alt="" (click)="openMenuBar()"> 
+</div>
+
+<div class="profile-picture-content" >
+<img [ngClass]="{'hidden': isMenuOpen}" class="profile-picture-img" src="assets/img/bild.png" alt="">
+<img [ngClass]="{'hidden': isMenuOpen}" class="bg-shape-img" src="assets/img/Bg shape for Photo.png" alt=""> 
+<app-menu-bar-mobile  [isMenuOpen]="isMenuOpen"></app-menu-bar-mobile>
+</div>
+
+<div class="headline">
+<h1 class="fontAnt"> Philip Tesch </h1>
+<h2 class="fontJosefin">FRONTEND DEVELOPER </h2>
+
+<img class="arrow-down" src="/assets/img/{{   imageSrc }}" alt="" (click)="howerArrowImg()">
+</div>
+</header>

@@ -1,0 +1,167 @@
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+section h1 {
+  color: #89BCD9;
+  font-weight: 400;
+  font-size: 32px;
+  margin-block-end: 80px;
+  margin-block-start: 50px;
+}
+
+.skills-content-mobile {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 300px;
+
+
+}
+
+section img {
+  height: 45px;
+  width: 42px;
+}
+
+.icon-learn {
+  animation: rotateImage 5s linear infinite, fadeOut 5s infinite alternate;
+}
+
+@keyframes rotateImage {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0.5;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.learning-icon-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.continually-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -10px;
+}
+
+.learning-icon-img {
+  height: 70px !important;
+  width: 50px !important;
+}
+
+.circle_icon-content {
+  position: absolute;
+}
+
+.circle_icon {
+  height: 70px !important;
+  width: 70px !important;
+  animation: rotateArrows 2.5s linear infinite;
+}
+
+@keyframes rotateArrows {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.further-development {
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  margin-top: 5px;
+  color: white;
+}
+
+.learning-icon-crate {
+  display: flex;
+  position: relative;
+  width: 100%;
+
+  span {
+    font-weight: 400;
+    font-size: 18px;
+    color: #F8F5EC;
+    text-align: center;
+  }
+
+  .backend-content {
+    position: absolute;
+    top: -275px;
+    left: 53%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 220px;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(38, 46, 52, 0.8);
+    border-radius: 50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: solid 6px blue;
+    margin-right: 19px;
+    transform: translateX(-90px);
+
+
+
+    @media (max-width: 450px) {
+      left: 35%;
+  }
+  }
+
+  .backend-content::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 130px;
+    transform: translateX(0);
+    width: 0;
+    height: 0;
+    border-left: 15px outset transparent;
+    border-right: 16px outset transparent;
+    border-top: 14px outset blue;
+
+
+    
+    @media (max-width: 450px) {
+      left: 190px;
+  }
+  }
+}
+
+.backend_icon {
+  height: 25px !important;
+  width: 25px !important;
+}
+
+.hidden {
+  visibility: hidden;
+}

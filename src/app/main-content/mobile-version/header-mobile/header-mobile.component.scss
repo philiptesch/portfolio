@@ -1,0 +1,105 @@
+header {
+    width: 100%;
+    padding: 35px;
+
+    @media (max-width: 360px) {
+        padding: 20px;
+    }
+
+    > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        .logo {
+            width: 58px;
+            height: 72px;
+        }
+
+        .menu-img {
+            margin-bottom: 30px;
+            width: 30px;
+            height: 32px;
+            cursor: pointer;
+        }
+    }
+
+    .profile-picture-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        flex-direction: column;
+
+        .profile-picture-img {
+            width: 279px;
+            height: 372px;
+            z-index: 1;
+            border-radius: 34%;
+            margin-right: 30px;
+
+            @media (max-width: 400px) {
+                width: 250px;
+                height: 359px;
+
+            }
+        }
+
+        .bg-shape-img {
+            width: 369px;
+            height: 323px;
+            position: absolute;
+            top: 50px;
+
+            @media (max-width: 400px) {
+                width: 290px;
+                height: 310px;
+            }
+        }
+    }
+        .headline {
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+        flex-direction: column;
+        margin-top: 30px;
+ 
+    h1 {
+        font-size: 48px;
+        color: white;
+        font-weight: 400;
+        margin-block-start: 20px;
+        margin-block-end: 0;
+
+        @media (max-width: 450px) {
+            font-size: 38px;
+        }
+    }
+
+    h2 {
+        font-size: 40px;
+        color: white;
+        font-weight: 400;
+
+        @media (max-width: 600px) {
+            font-size: 30px;
+        }
+
+        @media (max-width: 450px) {
+            font-size: 22px;
+        }
+    }
+
+    .arrow-down {
+        margin-top: 25px;
+        cursor: pointer;
+    }
+
+    }
+}
+
+
+
+.hidden {
+    visibility: hidden;
+  }

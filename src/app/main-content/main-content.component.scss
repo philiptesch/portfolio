@@ -1,0 +1,33 @@
+
+
+app-header-mobile {
+    background-color: #262e34;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+
+
+@media (max-width:719x) {
+    .hide-mobile {
+        display: none !important;
+    }
+    }
+  
+    
+  @media (min-width:720px) {
+      .hide-desktop {
+        display: none !important; 
+      
+      }
+        }
+
+.desktop-width-view {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+  
+}

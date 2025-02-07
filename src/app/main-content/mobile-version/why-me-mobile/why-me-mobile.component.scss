@@ -1,0 +1,194 @@
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    h1 {
+        color: #89BCD9;
+        font-weight: 400;
+        font-size: 32px;
+        margin-block-start: -80px;
+        margin-block-end: 0;
+    }
+}
+
+
+.located-city {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+        margin-right: 10px;
+
+
+
+
+
+        img {
+            opacity: 0;
+            transform: translateX(-100px);
+            animation: fadeIn 900ms ease-out forwards;   
+        }
+
+        @media (max-width: 650px) {
+            padding: 0px 0px 0px 0px;
+        }
+
+      
+        span {
+            font-weight: 700;
+            font-size: 18px;
+            font-family: "Josefin Sans";
+            color: white;
+            opacity: 0;
+            transform: translateX(50px);
+            animation: fadeIn 900ms ease-out forwards;
+            animation-delay: 900ms; 
+        }
+
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+}
+
+
+
+.work-remote{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+
+
+    @media (max-width: 650px) {
+        padding: 0px 0px 0px 0px;
+    }
+
+
+    img {
+        opacity: 0;
+        transform: translateX(-100px);
+        animation: fadeIn 900ms ease-out forwards;   
+    }
+  
+    span {
+        font-weight: 700;
+        font-size: 18px;
+        font-family: "Josefin Sans";
+        color: white;
+        opacity: 0;
+        transform: translateX(50px);
+        animation: fadeIn 900ms ease-out forwards;
+        animation-delay: 900ms; 
+    }
+
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+
+
+}
+
+
+
+
+.open-to-relocate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+
+
+    img {
+        opacity: 0;
+        transform: translateX(-100px);
+        animation: fadeIn 900ms ease-out forwards;   
+    }
+
+
+    @media (max-width: 650px) {
+        padding: 0px 0px 0px 0px;
+    }
+
+  
+    span {
+        font-weight: 700;
+        font-size: 18px;
+        font-family: "Josefin Sans";
+        color: white;
+        opacity: 0;
+        transform: translateX(50px);
+        animation: fadeIn 900ms ease-out forwards;
+        animation-delay: 900ms; 
+    }
+
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+
+}
+
+
+
+.color {
+    margin-left: 30px;   
+}
+
+.highlight-text{
+    color: #89BCD9 !important;
+}
+
+
+
+.about-me {
+        display: flex;
+        padding: 30px 140px 9px 140px;
+        justify-content: center;
+        align-items: center;
+        line-height: 30px;
+        text-align: center;
+        
+
+
+        @media (max-width: 550px) {
+            padding: 30px 50px 10px 50px;
+
+        }
+
+
+        >p {
+            font-weight: 400;
+            font-size: 16px;   
+            font-family: "Josefin Sans";
+            color: white;
+        }
+}
+
+
