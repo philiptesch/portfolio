@@ -1,0 +1,44 @@
+<div class="project-container">
+
+    <div class="project-presentation">
+        <div class="elPoloLoco_presentation">
+            <h3> {{ projects[1].name }} </h3>
+            <span class="intro"> Technologien: {{ projects[1].technologies }} </span>
+            <span class="intro"> Dauer: {{ projects[1].duration }} </span>
+
+            <div class="project_img-content">
+                <img class="project-img" [src]="projects[1].image" alt="">
+            </div>       
+
+            <div class="about-the-project">
+                <div class="about-the-project-headline">
+                    <img class="bullet-point-img" src="assets/img/Ellipse 8.png" alt="">
+                    <h6> Über das Projekt </h6>
+                </div>
+                <span> {{ projects[1].description }} </span>
+            </div>
+
+            <div class="organised-my-work">
+                <div class="organised-my-work-headline">
+                    <img class="bullet-point-img" src="assets/img/Ellipse 8.png" alt="">
+                    <h6> Wie ich meine Arbeit organisiert habe </h6>
+                </div>
+                <span> {{ projects[1].workOrganization }} </span>
+            </div>
+
+            <div class="my-group-work-experience">
+                <div class="my-group-work-experience-headline">
+                    <img class="bullet-point-img" src="assets/img/Ellipse 8.png" alt="">
+                    <h6> {{ projects[1].experience }} </h6>
+                </div>
+                <span> {{ projects[1].groupExperience }} </span>
+            </div>
+
+            <div class="button-live-test">
+                <button class="liveTestBtn">Live Test</button>
+                <button class="gitHubBtn">GitHub</button>
+            </div>
+        </div>
+    </div>
+</div>
+

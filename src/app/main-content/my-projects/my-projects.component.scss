@@ -1,0 +1,60 @@
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin-top: 50px;
+  }
+  
+  section h1 {
+    color: #89BCD9;
+    font-weight: 400;
+    font-size: 32px;
+    margin-block-end: 35px;
+    margin-block-start: 50px;
+  }
+
+
+  .my-Projects {
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+
+  app-join-project {
+    display: none;
+  }
+
+
+  app-el-pollo-loco {
+    display: none;
+  }
+  
+  .closeEllPoloLoco {
+    display: none;
+  }
+  .project {
+    display: flex;
+    padding: 0px 15px 0px 15px;
+  }
+
+
+.showProject {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 96px;
+    height: 40px;
+    background-color: #2d383F;
+}
+
+  h2 {
+    color: #89BCD9;
+    font-weight: 400;
+    font-size:16px;
+  }
+
+
+  .displayOpen {
+    display: block !important;
+  }

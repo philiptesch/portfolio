@@ -53,6 +53,15 @@ main {
         font-size: 30px;
         font-family: "Josefin Sans";
         color: white;
+
+        @media (max-width: 1300px) {
+            font-size: 22px;
+        }
+
+
+        @media (max-width: 950px) {
+            font-size: 18px;
+        }
     }
 }
 
@@ -62,12 +71,16 @@ main {
     align-items: center;
     margin-bottom: 30px;
     gap: 20px;
-    margin-left: 35px;
+    margin-right: 260px;
+
+    
+    @media (max-width: 1300px) {
+        margin-right: 210px;
+    }
 
 
-
-    @media (max-width: 1000px) {
-        margin-left: 0px;
+    @media (max-width: 950px) {
+        margin-right: auto;
     }
 
    
@@ -87,7 +100,21 @@ main {
         font-size: 30px;
         font-family: "Josefin Sans";
         color: white;
+
+
+
+        @media (max-width: 1300px) {
+            font-size: 22px;
+        }
+
+        @media (max-width: 950px) {
+            font-size: 18px;
+        }
     }
+
+
+
+
 }
 
 .open-to-relocate {
@@ -96,8 +123,18 @@ main {
     align-items: center;
     margin-bottom: 30px;
     gap: 20px;
-    margin-right: 20px;
+    margin-right: 279px;
 
+
+    
+    @media (max-width: 1300px) {
+        margin-right: 225px;
+    }
+
+    
+    @media (max-width: 950px) {
+        margin-right: auto;
+    }
 
 
 
@@ -116,6 +153,15 @@ main {
         font-size: 30px;
         font-family: "Josefin Sans";
         color: white;
+
+
+        @media (max-width: 1300px) {
+            font-size: 22px;
+        }
+
+        @media (max-width: 950px) {
+            font-size: 18px;
+        }
     }
 }
 

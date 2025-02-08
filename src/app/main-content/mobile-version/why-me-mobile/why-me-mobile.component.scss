@@ -23,7 +23,6 @@ section {
 
 
 
-
         img {
             opacity: 0;
             transform: translateX(-100px);
@@ -34,7 +33,11 @@ section {
             padding: 0px 0px 0px 0px;
         }
 
-      
+        div {
+            max-width: 260px;
+            display: flex;
+
+        
         span {
             font-weight: 700;
             font-size: 18px;
@@ -58,6 +61,7 @@ section {
                 transform: translateX(0);
             }
         }
+    }
 }
 
 
@@ -79,7 +83,10 @@ section {
         transform: translateX(-100px);
         animation: fadeIn 900ms ease-out forwards;   
     }
-  
+    
+    div {
+        display: flex;
+
     span {
         font-weight: 700;
         font-size: 18px;
@@ -103,7 +110,7 @@ section {
         }
     }
 
-
+    }
 
 }
 
@@ -114,8 +121,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 40px;
-
+    margin-right: 18px;
 
     img {
         opacity: 0;
@@ -128,6 +134,8 @@ section {
         padding: 0px 0px 0px 0px;
     }
 
+    div {
+        display: flex;
   
     span {
         font-weight: 700;
@@ -152,7 +160,7 @@ section {
         }
     }
 
-
+}
 }
 
 
@@ -174,8 +182,22 @@ section {
         align-items: center;
         line-height: 30px;
         text-align: center;
-        
+        opacity: 0;
+        animation: fadeInAboutMe 900ms ease-out forwards;
+        animation-delay: 900ms; 
 
+
+        @keyframes fadeInAboutMe {
+            from {
+                opacity: 0;
+                transform: translate(100px, -100px);
+            }
+            to {
+                opacity: 1;
+                transform: translate(0, 0);
+            }
+        
+        }
 
         @media (max-width: 550px) {
             padding: 30px 50px 10px 50px;

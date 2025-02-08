@@ -1,0 +1,25 @@
+<section>
+
+    <h1 class="fontAnt"> My Projects </h1>
+
+    <div class="my-Projects">
+        
+        
+        <div class="project showProject" (click)="openProjectJoin()" [ngClass]="{'showProject': projectJoinIsOpen}">
+
+            <h2> Join Project </h2>
+            <app-join-project [ngClass]="{'displayOpen': projectJoinIsOpen}" [projects]="projects"></app-join-project>
+        </div>
+        
+
+        <div class="project" (click)="openProjectElPoloLoco()" [ngClass]="{'showProject': projectElPoloIsOpen}">
+
+            <h2> El Polo Loco </h2>
+            <app-el-pollo-loco [ngClass]="{'displayOpen': projectElPoloIsOpen}" [projects]="projects"></app-el-pollo-loco>
+        </div>
+    
+    </div>
+
+
+
+</section>

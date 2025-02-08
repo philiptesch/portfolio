@@ -3,14 +3,13 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
 }
 
 section h1 {
   color: #89BCD9;
   font-weight: 400;
   font-size: 32px;
-  margin-block-end: 80px;
+  margin-block-end: 35px;
   margin-block-start: 50px;
 }
 
@@ -20,8 +19,35 @@ section h1 {
   gap: 40px;
   flex-wrap: wrap;
   max-width: 300px;
+  
 
+}
 
+.skillsIcon {
+  opacity: 0;
+  animation: fadeInSlide 0.8s ease-in-out forwards;
+}
+
+.skillsIcon:nth-child(1) { animation-delay: 0.2s; }
+.skillsIcon:nth-child(2) { animation-delay: 0.4s; }
+.skillsIcon:nth-child(3){ animation-delay: 0.6s; }
+.skillsIcon:nth-child(4) { animation-delay: 0.8s; }
+.skillsIcon:nth-child(5) { animation-delay: 1s; }
+.skillsIcon:nth-child(6) { animation-delay: 1.2s; }
+.skillsIcon:nth-child(7) { animation-delay: 1.4s; }
+.skillsIcon:nth-child(8) { animation-delay: 1.6s; }
+.skillsIcon:nth-child(9) { animation-delay: 1.8s; }
+.skillsIcon:nth-child(10) { animation-delay: 2s; }
+
+@keyframes fadeInSlide {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 section img {
@@ -29,30 +55,9 @@ section img {
   width: 42px;
 }
 
-.icon-learn {
-  animation: rotateImage 5s linear infinite, fadeOut 5s infinite alternate;
-}
 
-@keyframes rotateImage {
-  0% {
-      transform: rotate(0deg);
-  }
-  100% {
-      transform: rotate(360deg);
-  }
-}
 
-@keyframes fadeOut {
-  0% {
-      opacity: 1;
-  }
-  50% {
-      opacity: 0.5;
-  }
-  100% {
-      opacity: 1;
-  }
-}
+
 
 .learning-icon-content {
   display: flex;
@@ -84,6 +89,12 @@ section img {
   animation: rotateArrows 2.5s linear infinite;
 }
 
+
+.animate-fade-in {
+  animation: fadeInSlide 2.0s ease-in-out forwards;
+  animation-duration: 2.0s;
+}
+
 @keyframes rotateArrows {
   from {
       transform: rotate(0deg);
@@ -91,6 +102,19 @@ section img {
   to {
       transform: rotate(360deg);
   }
+}
+
+
+@keyframes fadeInSlide {
+  from {
+      opacity: 0;
+      transform: translateY(-150px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+
 }
 
 .further-development {
@@ -116,7 +140,7 @@ section img {
   .backend-content {
     position: absolute;
     top: -275px;
-    left: 53%;
+    left: 40%;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -141,7 +165,7 @@ section img {
     content: "";
     position: absolute;
     bottom: -15px;
-    left: 130px;
+    left: 200px;
     transform: translateX(0);
     width: 0;
     height: 0;
@@ -162,6 +186,71 @@ section img {
   width: 25px !important;
 }
 
+
+.my-ability-introduction-mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 250px;
+      text-align: center;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fadeInAboutMe 900ms ease-out forwards;
+      animation-delay: 900ms; 
+
+
+      @keyframes fadeInAboutMe {
+          from {
+              opacity: 0;
+              transform: translate(100px, -100px);
+          }
+          to {
+              opacity: 1;
+              transform: translate(0, 0);
+          }
+      
+      }
+    }
+
+.introduction-mobile {
+  font-weight: 400;
+  font-size: 18px;
+  color: #F8F5EC;
+}
+.go-to-messenger {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+
+  button {
+      border: solid 1px #89BCD9;
+      background-color:  #89BCD9;
+      padding: 13px 20px;
+      border-radius: 30px;
+      font-family: "Josefin Sans";
+      color: #262E34;
+      font-weight: 400;
+      font-size: 18px;
+      opacity: 0;
+      transform: translate(60px, -80px);
+      animation: fadeInButton 0.8s ease-out forwards;
+      animation-delay: 0.8s; 
+  
+  
+      @keyframes fadeInButton {
+        0% {
+            opacity: 0;
+            transform: translate(60px, -80px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(0, 0); /* Sanft nach innen gleiten */
+        }
+    }
+
+   
+  }
+}
 .hidden {
   visibility: hidden;
 }
