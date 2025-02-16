@@ -10,7 +10,7 @@ section {
   section h1 {
     color: #89BCD9;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 60px;
     margin-block-end: 35px;
     margin-block-start: 50px;
   }
@@ -22,12 +22,12 @@ section {
     position: relative;
   }
 
-  app-join-project {
+  app-join-project-desktop {
     display: none;
   }
 
 
-  app-el-pollo-loco {
+  app-el-polo-loco-desktop {
     display: none;
   }
   
@@ -36,22 +36,30 @@ section {
   }
   .project {
     display: flex;
-    padding: 0px 15px 0px 15px;
+    justify-content: center;
+    padding: 0px 5px 0px 15px;
+    
   }
 
 
+.indent-project-titles {
+  margin-left: 150px;
+
+}
+
+
 .showProject {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    width: 96px;
-    height: 40px;
-    background-color: #2d383F;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+  width: 240px;
+  height: 99px;
+  background-color: #2d383F;
 }
 
   h2 {
     color: #89BCD9;
     font-weight: 400;
-    font-size:16px;
+    font-size:36px;
   }
 
 

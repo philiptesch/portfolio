@@ -278,6 +278,12 @@ main {
     display: flex;
     justify-content: flex-end;
 
+
+    
+    @media (max-width: 850px) {
+        width: auto;
+    }
+
     button {
         border: solid 1px #89BCD9;
         background-color: #262E34;

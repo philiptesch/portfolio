@@ -7,12 +7,14 @@ import { MySkillsMobileComponent } from './mobile-version/my-skills-mobile/my-sk
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { MyProjectsMobileComponent } from './mobile-version/my-projects-mobile/my-projects-mobile.component';
 import { MyProjectsComponent } from './my-projects/my-projects.component';
+import { FeedbackTeamPartnerMobileComponent } from './mobile-version/feedback-team-partner-mobile/feedback-team-partner-mobile.component';
+import { FeedbackTeamPartnerComponent } from './feedback-team-partner/feedback-team-partner.component';
 
 @Component({
   selector: 'app-main-content',
   standalone: true,
   imports: [HeaderComponent, HeaderMobileComponent, WhyMeComponent, WhyMeMobileComponent, MySkillsMobileComponent, MySkillsComponent, MyProjectsMobileComponent
-    ,MyProjectsComponent
+    ,MyProjectsComponent, FeedbackTeamPartnerMobileComponent, FeedbackTeamPartnerComponent
   ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'

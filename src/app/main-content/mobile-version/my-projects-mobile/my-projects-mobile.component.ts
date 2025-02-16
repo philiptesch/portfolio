@@ -3,6 +3,7 @@ import { Expression } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { ElPolloLocoComponent } from "./el-pollo-loco/el-pollo-loco.component";
 import { JoinProjectComponent } from './join-project/join-project.component';
+import { ProjectStateService } from '../../services/project-state.service';
 
 @Component({
   selector: 'app-my-projects-mobile',
@@ -40,24 +41,21 @@ projectElPoloIsOpen:boolean = false
 
 
 
+  constructor(private projectStateService: ProjectStateService) {
+    // Service abonnieren, um den Zustand zu erhalten
+    this.projectStateService.projectState$.subscribe((isJoinOpen) => {
+      this.projectJoinIsOpen = isJoinOpen;
+      this.projectElPoloIsOpen = !isJoinOpen;
+    });
+  }
 
   openProjectElPoloLoco() {
-    this.projectElPoloIsOpen = !this.projectElPoloIsOpen;
-    this.projectJoinIsOpen = false;
+    this.projectStateService.setProjectState(false);
   }
-
-
 
   openProjectJoin() {
-
-    if (this.projectJoinIsOpen) {
-        return;
-    } else {
-    this.projectJoinIsOpen = !this.projectJoinIsOpen;
-    this.projectElPoloIsOpen = false;
-    }
+    this.projectStateService.setProjectState(true);
   }
-
 
 
 

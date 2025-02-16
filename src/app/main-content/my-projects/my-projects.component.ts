@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { JoinProjectDesktopComponent } from './join-project-desktop/join-project-desktop.component';
 import { ElPoloLocoDesktopComponent } from './el-polo-loco-desktop/el-polo-loco-desktop.component';
 import { CommonModule } from '@angular/common';
+import { ProjectStateService } from '../services/project-state.service';
 
 @Component({
   selector: 'app-my-projects',
@@ -14,8 +15,8 @@ export class MyProjectsComponent {
 
 
 
-  projectJoinIsOpen:boolean = true
-projectElPoloIsOpen:boolean = false
+  joinIsOpen:boolean = true
+  elPoloIsOpen:boolean = false
 
   projects = [
     {
@@ -40,23 +41,21 @@ projectElPoloIsOpen:boolean = false
     }
   ];
 
-
-
+  constructor(private projectStateService: ProjectStateService) {
+    // Service abonnieren, um den Zustand zu erhalten
+    this.projectStateService.projectState$.subscribe((isJoinOpen) => {
+      this.joinIsOpen = isJoinOpen;
+      this.elPoloIsOpen = !isJoinOpen;
+    });
+  }
 
   openProjectElPoloLoco() {
-    this.projectElPoloIsOpen = !this.projectElPoloIsOpen;
-    this.projectJoinIsOpen = false;
+    this.projectStateService.setProjectState(false);
   }
-
-
 
   openProjectJoin() {
-
-    if (this.projectJoinIsOpen) {
-        return;
-    } else {
-    this.projectJoinIsOpen = !this.projectJoinIsOpen;
-    this.projectElPoloIsOpen = false;
-    }
+    this.projectStateService.setProjectState(true);
   }
+
+
 }

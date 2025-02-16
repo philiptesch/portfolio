@@ -1,1 +1,76 @@
-<p>el-polo-loco-desktop works!</p>
+<div class="project-container">
+
+    <div class="project-presentation">
+        <div class="ellPoloLoco_presentation">
+          
+            <div class="about-the-project">
+                <div class="about-the-project-headline">
+                    <div class="buttet-point-content">
+                    <img class="bullet-point-img" src="assets/img/Ellipse 8.png" alt="">
+                    </div>   
+                    <h6> Über das Projekt </h6>
+                </div>
+
+                <span> {{ projects[1].description }} </span>
+            </div>
+
+            <div class="organised-my-work">
+                <div class="organised-my-work-headline">
+                    <div class="buttet-point-content">
+                    <img class="bullet-point-img" src="assets/img/Ellipse 8.png" alt="">
+                    </div>  
+                    <h6> Wie ich meine Arbeit organisiert habe </h6>
+                </div>
+                <span> {{ projects[1].workOrganization }} </span>
+            </div>
+
+            <div class="my-group-work-experience">
+                <div class="my-group-work-experience-headline">
+                    <div class="buttet-point-content">
+                        <img class="bullet-point-img" src="assets/img/Ellipse 8.png" alt="">
+                        </div>  
+                    <h6> {{ projects[1].experience }} </h6>
+                </div>
+                <span> {{ projects[1].groupExperience }} </span>
+            </div>
+
+
+            
+
+            
+        </div>
+
+      <div class="overview-about-the-project">
+
+
+        <div class="technologies">
+
+            <div class="headline">
+            <h6> Technologies</h6>
+            <div class="technologi-images">
+            <img class="technologi-img" src="assets/img/html.png" alt="">
+            <img class="technologi-img" src="assets/img/Javascript.png" alt="">
+            <img class="technologi-img" src="assets/img/css.png" alt="">
+            </div>
+            </div>
+
+
+            <img class="project-img" src="{{ projects[1].image }}" alt="">
+
+
+        </div>
+
+        <div class="button-live-test">
+            <button class="liveTestBtn">Live Test</button>
+            <button class="gitHubBtn">GitHub</button>
+        </div>
+
+
+
+      </div>
+
+
+
+    </div>
+</div>
+

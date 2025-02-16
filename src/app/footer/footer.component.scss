@@ -1,0 +1,56 @@
+footer {
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 250px;
+    background-color: #89bcd9;
+    margin-top: 250px;
+}
+
+
+
+.name-and-legal-notes {
+    display: flex;
+    padding: 80px;
+    flex-direction: column;
+    gap: 15px;    
+
+
+    a {
+        color: #262e34;
+        font-weight: 400;
+        font-size: 18px;    
+        text-decoration: none;
+
+
+        &:hover {
+            color: white;
+        }
+    }
+
+
+
+}
+
+
+
+
+
+.logo {
+
+
+    img {
+        width: 60px;
+        height: 80px;
+    }
+}
+
+
+
+.social-media-icons {
+    padding-right: 90px;
+    display: flex;
+    gap: 20px;
+ 
+}
