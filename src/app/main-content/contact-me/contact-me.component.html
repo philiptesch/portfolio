@@ -1,0 +1,85 @@
+<section>
+
+
+    <div class="headline">
+    <h1 class="fontAnt">Contact me</h1>
+    <img class="mailIcon" src="assets/img/{{ arrow }}" (click)="onHoverArrow(true); scrollToMainContent()">
+    </div>
+
+    <div class="my-contact">
+
+
+        <span> 
+            Still not sure if I am the right person for your project? Lorem ipsum dolor sit amet consectetur.
+             Nat oqueg diam  prjfgh etium arcu sed senectus felis acm uris. Dui eget dict um.osuere pretium arcu sed senec tusfelis ac
+        </span>
+
+
+        <div class="reach-me">
+
+            <div class="mail-contact">
+            <img class="mailIcon" src="assets/img/icon _email_.png" alt="">
+            <a href="mailto:philip.tesch.developer@gmail.com">E-Mai: philip.tesch.developer&#64;gmail.com</a>
+            </div>    
+
+
+            <div class="phone-contact">
+            <img class="phoneIcon" src="assets/img/icon_phone.png" alt="">
+            <a href="tel:+4915150645442">Tel: 015150645442 </a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="message">
+        <form (ngSubmit)="onSubmit(contactform)" #contactform="ngForm">
+        <div class="your-contact-info"> 
+            <div class="your-name">
+                <label>Your Name</label>
+                <input (blur)="checkEnterName()" id="username" #usernameInput [(ngModel)]="contactData.name"  name="username"  class="name-input-Field"
+                 type="text" placeholder="Ihre Name" required  [ngClass]="{ 'invalid-input': nameInvalid }">
+
+                 <span *ngIf="nameInvalid" class="error-text">Bitte vollständigen Namen eingeben!</span>
+            </div>
+    
+            <div class="your-email">
+                <label>Your Email</label>
+                <input (blur)="checkEnterMail()"  id="userEmail"  #useremailInput [(ngModel)]="contactData.email" name="userEmail"  class="email-input-Field" type="text" placeholder="Ihre E-Mail"
+                [ngClass]="{ 'invalid-input': emailInvalid }" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                <span *ngIf="emailInvalid" class="error-text">Bitte E-Mail Adresse eintragen!!!</span>
+            </div>
+        </div>
+    
+        <div class="your-message-content">
+            <label>Your Message</label>
+            <div class="your-message-text">
+                <textarea (blur)="checkEnterMessage()" [(ngModel)]="contactData.message" name="userMessage" class="message-input-Field"
+                [ngClass]="{ 'invalid-input': messageInvalid }"    id="userMessage"  #usermessageInput      placeholder="Ihre Nachricht" required>
+
+
+                </textarea>
+            </div>
+            <span *ngIf="messageInvalid" class="error-text">Bitte eine Nachricht eingeben!!!</span>
+        </div>
+
+        <div class="checked"> 
+
+            <img src="assets/img/check_icon.png" alt="">
+            <span> I've read the 
+                <a href="#"> privacy policy </a>    
+                and agree to the processing of my data as outlined.
+            </span>
+        </div>
+
+
+        <div class="button-content">
+            <button >Send</button>
+        </div>
+    </form>
+    </div>
+
+    
+
+</section>

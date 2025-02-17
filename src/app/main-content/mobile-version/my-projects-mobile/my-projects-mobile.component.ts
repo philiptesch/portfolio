@@ -21,7 +21,7 @@ projectElPoloIsOpen:boolean = false
       name: 'Join Project',
       technologies: 'HTML, CSS, JavaScript',
       duration: '2 Monate',
-      image: 'assets/img/join_project.png',
+      image: 'assets/img/join_project (1).png',
       description: 'Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.',
       workOrganization: 'Ich habe mit Kanban und regelmäßigen Standups meine Arbeit organisiert.',
       experience: 'Meine Erfahrung in der Gruppenarbeit',

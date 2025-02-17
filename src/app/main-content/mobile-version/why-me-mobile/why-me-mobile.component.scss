@@ -3,6 +3,11 @@ section {
     display: flex;
     justify-content: center;
 
+
+    @media (max-height: 720px) {
+        margin-top: 250px;
+    }
+
     h1 {
         color: #89BCD9;
         font-weight: 400;

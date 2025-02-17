@@ -6,6 +6,15 @@ footer {
     height: 250px;
     background-color: #89bcd9;
     margin-top: 250px;
+
+
+
+    @media (max-width: 720px) {
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 20px;
+    }
 }
 
 
@@ -23,12 +32,17 @@ footer {
         font-size: 18px;    
         text-decoration: none;
 
-
-        &:hover {
-            color: white;
-        }
     }
 
+    .legal-Notes:hover {
+        color: white;
+    }
+
+
+
+    @media (max-width: 720px) {
+        display: none;
+    }
 
 
 }
@@ -52,5 +66,9 @@ footer {
     padding-right: 90px;
     display: flex;
     gap: 20px;
- 
+    
+    
+    @media (max-width: 720px) {
+        padding-right: 0px;
+    }
 }

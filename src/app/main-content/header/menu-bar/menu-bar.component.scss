@@ -3,6 +3,7 @@
     height: 110px;
     width: 100vw;
     margin-top: 20px;
+    
 
 
     .menu{
@@ -41,6 +42,16 @@
     
     
 }
+
+
+.menu-bar-desktop.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 0; 
+    z-index: 9999;
+  }
+
         .menu-bar-links{
             display: flex;
             align-items: center;
