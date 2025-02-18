@@ -96,6 +96,7 @@
             color: black;
             font-weight: 500;
             font-size: 26px;
+            cursor: pointer;
             
     
             &:hover {
@@ -115,6 +116,7 @@
             position: relative;
             display: flex;
             gap: 25px;    
+            cursor: pointer;
         >p {
             font-weight: 400;
             font-size: 18px;

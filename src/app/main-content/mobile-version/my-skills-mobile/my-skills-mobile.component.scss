@@ -81,6 +81,7 @@ section img {
 
 .circle_icon-content {
   position: absolute;
+  cursor: pointer;
 }
 
 .circle_icon {
@@ -235,6 +236,11 @@ section img {
       transform: translate(60px, -80px);
       animation: fadeInButton 0.8s ease-out forwards;
       animation-delay: 0.8s; 
+      cursor: pointer;
+
+      &:hover {
+        color: white;
+      }
   
   
       @keyframes fadeInButton {

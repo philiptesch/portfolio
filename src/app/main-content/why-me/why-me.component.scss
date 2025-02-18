@@ -296,7 +296,7 @@ main {
         transform: translate(200px, -200px);
         animation: fadeInButton 1000ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
         animation-delay: 1000ms; 
-    
+        cursor: pointer;    
     
         @keyframes fadeInButton {
             from {
@@ -314,4 +314,12 @@ main {
             background: rgba(248, 245, 236, 0.12);
         }
     }
+}
+
+a {
+    text-decoration: none;
+    font-family: "Josefin Sans";
+    color: #89BCD9;
+    font-weight: 400;
+    font-size: 18px;
 }

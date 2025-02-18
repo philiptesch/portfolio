@@ -139,7 +139,7 @@ section {
   .feedback-form-teampartner {
     position: absolute;
     top: 60px;
-    left: 60px;
+    left: 30px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -219,7 +219,7 @@ section {
 .feedback-form-teampartner-two {
     position: absolute;
     top: 60px;
-    left: 60px;
+    left: 30px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -266,4 +266,15 @@ section {
     font-size:15px;
   }
 
+}
+
+
+a {
+  text-align: center;
+  margin-top: 50px;
+  color: #89BCD9;
+
+  &:hover {
+    color: white;
+  }
 }

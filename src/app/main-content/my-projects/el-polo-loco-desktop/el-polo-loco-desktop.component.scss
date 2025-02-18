@@ -399,6 +399,11 @@
         opacity: 0;
         animation: fadeInUp 0.9s ease-in-out forwards;
         animation-delay: 1.6s; 
+        cursor: pointer;
+
+        &:hover {
+            color: white;
+        }
     }
 
 
@@ -412,6 +417,11 @@
         opacity: 0;
         animation: fadeInUp 0.9s ease-in-out forwards;
         animation-delay: 1.8s; 
+        cursor: pointer;
+
+        &:hover {
+            color: white;
+        }
     }
 
     .liveTestBtn {

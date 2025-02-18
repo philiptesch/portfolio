@@ -18,7 +18,11 @@ export class ContactMeComponent {
   @ViewChild('usermessageInput') usermessageInput!: ElementRef;
 
 hoverdArrow: boolean = false;
+checked: boolean = false;
 arrow = 'arrow_up.png';
+isNotChecked= 'Property 1=error.png';
+isChecked ='check_icon.png';
+isFormValid: boolean = false;
 http = inject(HttpClient);
 
 contactData = {
@@ -28,42 +32,69 @@ contactData = {
 }
 
 
-mailTest = true;
 nameInvalid: boolean = false;
 emailInvalid: boolean = false;
 messageInvalid: boolean = false;
 
-post = {
-  endPoint: 'https://philip-tesch.de/sendMail.php',
-  body: (payload: any) => JSON.stringify(payload),
-  options: {
-    headers: {
-      'Content-Type': 'text/plain',
-      responseType: 'text',
-    },
-  },
-};
+  post = {
+    endPoint: 'https://philip-tesch.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'application/json' // Korrekt für JSON
+      },
+      responseType: 'text' as 'json' // Richtig gesetzt
+    }
+  };
 
-
-onSubmit(ngForm: NgForm) {
-  if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-    this.http.post(this.post.endPoint, this.post.body(this.contactData))
-      .subscribe({
-        next: (response) => {
-
-          ngForm.resetForm();
-        },
-        error: (error) => {
-          console.error(error);
-        },
-        complete: () => console.info('send post complete'),
-      });
-  } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
-    ngForm.resetForm();
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.submitted && ngForm.form.valid) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
+        .subscribe({
+          next: (response) => {
+            console.log("Response received:", response);
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error("Error in request:", error);
+          },
+          complete: () => console.info('Post request completed'),
+        });
+    }
   }
+
+
+checkInputFieldEmail() {
+  let userEmail = this.useremailInput.nativeElement.value;
+  return !this.emailIsValid(userEmail) || userEmail.length < 3 || userEmail.length > 30
 }
 
+
+checkInputFieldName() {
+  let username = this.usernameInput.nativeElement.value;
+  return !this.nameIsNotValid(username) || username.length < 3 || username.length > 30;
+}
+
+
+checkInputFieldMessage() {
+  let userMessage = this.usermessageInput.nativeElement.value;
+  return userMessage.length < 3;
+}
+
+
+checkPrivacy() {
+  this.isChecked ='is_checked.png';
+  this.checked =   !this.checked;
+  if (this.checked && !this.checkInputFieldMessage() && !this.checkInputFieldEmail() && !this.checkInputFieldMessage() ) {
+    this.checked = false;
+    this.isFormValid = true;
+}else {
+  this.isChecked ='Property 1=error.png'; 
+  this.isFormValid = false;
+    
+}
+
+}
 
 
 

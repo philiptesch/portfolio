@@ -19,6 +19,8 @@ export class HeaderComponent {
   iconLinkedin: string = 'Property 1=default (4).png'
   iconEmail: string = 'Property 1=default (3).png'
   bgShape: string = 'Property 1=hover.png'
+  arrow = 'arrow-down-hover.png';
+  hoverdArrow: boolean = false;
 
 
   onHover(hovered: boolean) {
@@ -71,5 +73,30 @@ export class HeaderComponent {
       this.bgShape = 'Bg shape for Photo.png'
   }
   }
+
+  scrollToWhyMe(): void {
+    let whyMetElement = document.getElementById('why-me');
+    if (whyMetElement) {
+      const yOffset = -60; // Höhe der fixierten Menüleiste
+      const yPosition = whyMetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: yPosition, behavior: 'smooth' });
+  
+      setTimeout(() => {
+        this.arrow = 'Arrow down.png';
+      }, 500);
+    }
+  }
+
+
+  onHoverArrow(hovered: boolean) {
+    this.hoverdArrow = hovered
+    if (this.hoverdArrow) {
+        this.arrow = 'arrow-down-hover.png'
+    }else {
+      this.arrow = 'Arrow down.png'
+  }
+}
+
+
 
 }

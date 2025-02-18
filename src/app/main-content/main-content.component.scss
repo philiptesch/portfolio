@@ -6,8 +6,11 @@ app-header-mobile {
     height: 100%;
     display: flex;
 }
-
-
+html {
+  scroll-behavior: smooth;
+}
+$fontJosefin: 'Josefin Sans';
+$fontAnt: 'Anta';
 
 @media (max-width:719x) {
     .hide-mobile {

@@ -385,6 +385,7 @@
     gap: 22px;
     padding: 30px 10px 5px 70px;
     justify-content: center;
+    
 
     @media (max-width:850px) {
         padding: 30px 10px 5px 0px;
@@ -400,6 +401,11 @@
         opacity: 0;
         animation: fadeInUp 0.9s ease-in-out forwards;
         animation-delay: 1.6s; 
+        cursor: pointer;
+
+        &:hover {
+            color: white;
+        }
     }
 
 
@@ -413,6 +419,11 @@
         opacity: 0;
         animation: fadeInUp 0.9s ease-in-out forwards;
         animation-delay: 1.8s; 
+        cursor: pointer;
+
+        &:hover {
+            color: white;
+        }
     }
 
     .liveTestBtn {
