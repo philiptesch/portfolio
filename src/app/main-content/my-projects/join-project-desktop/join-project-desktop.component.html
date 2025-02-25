@@ -2,16 +2,19 @@
 
     <div class="project-presentation">
         <div class="join_presentation">
+        
           
             <div class="about-the-project">
                 <div class="about-the-project-headline">
                     <div class="buttet-point-content">
                     <img class="bullet-point-img" src="assets/img/Ellipse 8.png" alt="">
                     </div>   
-                    <h6> Über das Projekt </h6>
+                    <h6 [ngClass]="{'none': isEnglish}"> About the project </h6>
+                    <h6 [ngClass]="{'none': !isEnglish}"> Über das Projekt </h6>
                 </div>
 
-                <span> {{ projects[0].description }} </span>
+                <span [ngClass]="{'none': isEnglish}"> {{ projectsEnglish[0].description }} </span>
+                <span [ngClass]="{'none': !isEnglish}"> {{ projects[0].description }} </span>
             </div>
 
             <div class="organised-my-work">
@@ -19,9 +22,11 @@
                     <div class="buttet-point-content">
                     <img class="bullet-point-img" src="assets/img/Ellipse 8.png" alt="">
                     </div>  
-                    <h6> Wie ich meine Arbeit organisiert habe </h6>
+                    <h6 [ngClass]="{'none': isEnglish}"> How I organized my work </h6>
+                    <h6 [ngClass]="{'none': !isEnglish}"> Wie ich meine Arbeit organisiert habe </h6>
                 </div>
-                <span> {{ projects[0].workOrganization }} </span>
+                <span [ngClass]="{'none': isEnglish}"> {{ projectsEnglish[0].workOrganization }} </span>
+                <span [ngClass]="{'none': !isEnglish}"> {{ projects[0].workOrganization }} </span>
             </div>
 
             <div class="my-group-work-experience">
@@ -29,9 +34,17 @@
                     <div class="buttet-point-content">
                         <img class="bullet-point-img" src="assets/img/Ellipse 8.png" alt="">
                         </div>  
-                    <h6> {{ projects[0].experience }} </h6>
+                    <h6 [ngClass]="{'none': isEnglish}"> {{ projectsEnglish[0].experience }} </h6>
+                    <h6 [ngClass]="{'none': !isEnglish}"> {{ projects[0].experience }} </h6>
                 </div>
-                <span> {{ projects[0].groupExperience }} </span>
+                <span [ngClass]="{'none': isEnglish}"> {{ projectsEnglish[0].groupExperience }} </span>
+                <span [ngClass]="{'none': !isEnglish}"> {{ projects[0].groupExperience }} </span>
+            </div>
+
+
+            <div class="button-live-test-mobile">
+                <button class="liveTestBtn">Live Test</button>
+                <button class="gitHubBtn">GitHub</button>
             </div>
 
 
@@ -46,7 +59,8 @@
         <div class="technologies">
 
             <div class="headline">
-            <h6> Technologies</h6>
+            <h6 [ngClass]="{'none': isEnglish}"> Technologien</h6>
+            <h6 [ngClass]="{'none': !isEnglish}" > Technologies </h6>
             <div class="technologi-images">
             <img class="technologi-img" src="assets/img/html.png" alt="">
             <img class="technologi-img" src="assets/img/Javascript.png" alt="">
@@ -54,8 +68,18 @@
             </div>
             </div>
 
+            <div class="mobile-view">
+            <h3> {{ projects[0].name }} </h3>
+            <span [ngClass]="{'none': isEnglish}" class="intro"> Technologien: {{ projectsEnglish[0].technologies }} </span>
+            <span [ngClass]="{'none': !isEnglish}" class="intro"> duration: {{ projectsEnglish[0].duration }} </span>
 
-            <img class="project-img" src="{{ projects[0].image }}" alt="">
+            <span [ngClass]="{'none': isEnglish}" class="intro"> Technologies: {{ projectsEnglish[0].technologies }} </span>
+            <span  [ngClass]="{'none': !isEnglish}" class="intro"> Dauer: {{ projects[0].duration }} </span>
+             </div>
+
+             <div class="project_img-content">
+             <img class="project-img" src="{{ projects[0].image }}" alt="">
+            </div>   
 
 
         </div>

@@ -1,20 +1,29 @@
-import { Component, HostListener  } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-menu-bar',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './menu-bar.component.html',
-  styleUrl: './menu-bar.component.scss'
+  styleUrls: ['./menu-bar.component.scss']
 })
-export class MenuBarComponent {
-
-
+export class MenuBarComponent implements OnInit {
   isMenuBarFixed: boolean = false;
+  isEnglish: boolean = false; 
+
+  constructor(private languageService: LanguageService) {}
+
+  ngOnInit() {
+
+    this.languageService.isEnglish$.subscribe((status) => {
+      this.isEnglish = status;
+    });
+  }
+
+
   @HostListener('window:scroll', [])
-
-
-
   onWindowScroll(): void {
     let scrollPosition = window.scrollY || document.documentElement.scrollTop;
     let headerElement = document.getElementById('main-content-header');
@@ -25,4 +34,7 @@ export class MenuBarComponent {
     }
   }
 
+  translateInEnglish() {
+    this.languageService.toggleLanguage();
+  }
 }

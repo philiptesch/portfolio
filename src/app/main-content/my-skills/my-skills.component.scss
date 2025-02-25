@@ -1,9 +1,12 @@
 section {
-    width: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     margin-bottom: 50px;
     flex-direction:column ;
+    overflow-x: hidden;
+
+
 
 
     h1 {
@@ -12,7 +15,17 @@ section {
         font-size: 60px;;
         margin-block-end: 80px;
         margin-block-start: 50px;
+
+
+        @media (max-width: 720px) {
+          font-size: 32px;
+          margin-block-end: 35px;
+          margin-block-start: 50px;
+      }
         }
+
+
+        
 
 
     img {
@@ -26,6 +39,44 @@ section {
       }
     }
 
+}
+
+
+.my-ability-introduction-mobile {
+display: none;
+  @media (max-width: 720px) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 250px;
+  text-align: center;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeInAboutMe 900ms ease-out forwards;
+  animation-delay: 900ms; 
+  }
+
+  @keyframes fadeInAboutMe {
+      from {
+          opacity: 0;
+          transform: translate(100px, -100px);
+      }
+      to {
+          opacity: 1;
+          transform: translate(0, 0);
+      }
+  
+  }
+}
+
+.introduction-mobile {
+display: none;
+  @media (max-width: 720px) {
+display: block;
+font-weight: 400;
+font-size: 18px;
+color: #F8F5EC;
+  }
 }
 
 
@@ -67,6 +118,18 @@ section {
   @media (max-width: 850px) {
     margin-right: 50px;
 }
+
+
+@media (max-width: 720px) {
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 300px;
+  margin-right: 0px;
+}
+
+
+
+
 
 
 
@@ -138,6 +201,10 @@ section {
 
   @media (max-width: 900px) {
     margin-left: 0px;
+}
+
+@media (max-width: 720px) {
+display: none;
 }
 
     .bg_Ellipse_content {
@@ -437,6 +504,17 @@ position: relative;
   top: -175px;
 }
 
+
+@media (max-width: 720px) {
+  left: 40%;
+}
+
+
+@media (max-width: 450px) {
+  left: 40%;
+  transform: translateX(-140px);
+}
+
 }
 
 .backend-content::after {
@@ -460,6 +538,10 @@ position: relative;
   @media (max-width: 800px) {
     transform: translateX(-50%); 
     left: 50%;
+  }
+
+  @media (max-width: 450px) {
+    left: 75%;
   }
 }
 
@@ -513,8 +595,52 @@ position: relative;
 
 }
 
+.go-to-messenger {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+button {
+  border: solid 1px #89BCD9;
+  background-color:  #89BCD9;
+  padding: 13px 20px;
+  border-radius: 30px;
+  font-family: "Josefin Sans";
+  color: #262E34;
+  font-weight: 400;
+  font-size: 18px;
+  opacity: 0;
+  transform: translate(60px, -80px);
+  animation: fadeInButton 0.8s ease-out forwards;
+  animation-delay: 0.8s; 
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+  }
+
+
+  @keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: translate(60px, -80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0); /* Sanft nach innen gleiten */
+    }
+}
+
+
+}
+}
 
 
 .hidden {
   visibility: hidden;
+}
+
+
+.none {
+  display: none !important;
 }

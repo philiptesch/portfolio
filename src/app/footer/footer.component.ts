@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { LanguageService } from '../main-content/services/language.service'
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [RouterModule, CommonModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
@@ -15,9 +19,17 @@ export class FooterComponent {
   iconGitHub: string = 'github_dark.png'
   iconLinkedin: string = 'linkedin_dark.png'
   iconEmail: string = 'mail_dark.png'
+  isEnglish: boolean = false; 
 
+  constructor(private languageService: LanguageService ) {
+  }
 
+  ngOnInit() {
 
+    this.languageService.isEnglish$.subscribe((status) => {
+      this.isEnglish = status;
+    });
+  }
 
   onHoverLinkedin(hovered: boolean) {
     this.hoveredSocialIconLinkedin = hovered

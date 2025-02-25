@@ -1,13 +1,24 @@
 footer {
-    width:100vw;
+    height: 250px;
+    background-color: #89bcd9;
+    margin-top: 100px;
+    width: 100%; 
+    box-sizing: border-box;
+    position: absolute;
+
+
+    @media (max-height: 700px) {
+        width: 125%; 
+    }
+
+ 
+    
+}
+
+main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 250px;
-    background-color: #89bcd9;
-    margin-top: 250px;
-
-
 
     @media (max-width: 720px) {
         justify-content: flex-start;
@@ -15,9 +26,10 @@ footer {
         gap: 20px;
         padding-top: 20px;
     }
+
+
+
 }
-
-
 
 .name-and-legal-notes {
     display: flex;
@@ -73,3 +85,7 @@ footer {
         padding-right: 0px;
     }
 }
+
+.none {
+    display: none !important;
+  }

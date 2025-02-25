@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
+import { MenuBarMobileComponent } from '../mobile-version/header-mobile/menu-bar-mobile/menu-bar-mobile.component';
+import { CommonModule } from '@angular/common';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [MenuBarComponent],
+  imports: [MenuBarComponent, MenuBarMobileComponent, CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -14,6 +17,7 @@ export class HeaderComponent {
   hoveredSocialIconLinkedin:boolean = false;
   hoveredSocialIconGitHub:boolean = false;
   hoveredBgShape:boolean = false;
+  isMenuOpen: boolean = false;
   logoImg: string = 'logo.png'
   iconGitHub: string = 'Property 1=default (2).png'
   iconLinkedin: string = 'Property 1=default (4).png'
@@ -21,7 +25,32 @@ export class HeaderComponent {
   bgShape: string = 'Property 1=hover.png'
   arrow = 'arrow-down-hover.png';
   hoverdArrow: boolean = false;
+  screenWidth: number = window.innerWidth; 
+  isEnglish:boolean =false;
+  
+    constructor(private languageService: LanguageService) {}
+  
+  
+    ngOnInit() {
+      this.languageService.isEnglish$.subscribe((status) => {
+        this.isEnglish = status; 
+      });
+    }
 
+
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.updateScreenWidth();
+  }
+
+  updateScreenWidth() { 
+    this.screenWidth = window.innerWidth;
+    if (this.screenWidth >= 720) {
+      this.isMenuOpen = false;
+      
+    }
+  }
 
   onHover(hovered: boolean) {
     this.hoveredLogo = hovered
@@ -77,7 +106,7 @@ export class HeaderComponent {
   scrollToWhyMe(): void {
     let whyMetElement = document.getElementById('why-me');
     if (whyMetElement) {
-      const yOffset = -60; // Höhe der fixierten Menüleiste
+      const yOffset = -60; 
       const yPosition = whyMetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: yPosition, behavior: 'smooth' });
   
@@ -95,6 +124,11 @@ export class HeaderComponent {
     }else {
       this.arrow = 'Arrow down.png'
   }
+}
+
+openMenuBar() {
+  this.isMenuOpen = !this.isMenuOpen;
+
 }
 
 

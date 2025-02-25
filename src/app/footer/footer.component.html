@@ -2,9 +2,10 @@
 
 
 
-
+<main>
     <div class="name-and-legal-notes">
-        <a class="legal-Notes"  href="#"> Legal Notes</a>
+        <a [ngClass]="{'none': isEnglish}" [routerLink]="'/terms/imprint'" class="legal-Notes"  href="#"> Legal Notes</a>
+        <a [ngClass]="{'none': !isEnglish}" [routerLink]="'/terms/imprint'" class="legal-Notes"  href="#">  Rechtliche Hinweise</a>
         <a  href=""> © Philip Tesch </a>
     </div>
 
@@ -23,6 +24,7 @@
 
 
     </div>
+</main>
 
 
 </footer>

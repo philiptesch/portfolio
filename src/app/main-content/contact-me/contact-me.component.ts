@@ -2,11 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject, ViewChild, ElementRef } from '@angular/core';
 import { FormsModule, NgForm, } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterModule],
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.scss'
 })
@@ -35,17 +37,30 @@ contactData = {
 nameInvalid: boolean = false;
 emailInvalid: boolean = false;
 messageInvalid: boolean = false;
+isEnglish: boolean = false; 
 
   post = {
     endPoint: 'https://philip-tesch.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
-        'Content-Type': 'application/json' // Korrekt für JSON
+        'Content-Type': 'application/json' 
       },
-      responseType: 'text' as 'json' // Richtig gesetzt
+      responseType: 'text' as 'json' 
     }
   };
+
+  constructor(private languageService: LanguageService ) {
+
+  }
+
+  ngOnInit() {
+
+    this.languageService.isEnglish$.subscribe((status) => {
+      this.isEnglish = status;
+    });
+  }
+
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid) {

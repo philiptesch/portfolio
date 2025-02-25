@@ -1,40 +1,60 @@
 <section>
-    <h1 class="fontAnt">Why Me</h1>
+    <h1  [ngClass]="{'none': isEnglish}"class="fontAnt">Why Me</h1>
+    <h1 [ngClass]="{'none': !isEnglish}" class="fontAnt">Warum ich</h1>
 </section>
 
 <main>
 <div class="about-me-lovation-info">
-    <div class="located-city">
+    <div class="located-city-english">
         <img src="assets/img/Group 60 (1).png" alt="">
-        <span class="color">
-            <span class="highlight-text">Ich befinde </span>  mich in Traisen im Rhein-Nahe-Gebiet
-        </span>
+        <div>
+        <span class="color" [ngClass]="{'none': isEnglish}" >
+            <span class="highlight-text"> I am in</span>   in the Rhine-Nahe area </span>
+
+            <span class="color" [ngClass]="{'none': !isEnglish}">
+            <span class="highlight-text">Ich befinde </span>  mich in Traisen im Rhein-Nahe-Gebiet </span>
+        </div>
     </div>
 
     <div class="work-remote">
         <img src="assets/img/Icon Remote.png" alt="">
-        <span class="color">
-            <span class="highlight-text">Ich bin </span> offen für Remote-Arbeit
-        </span>
+        <div>
+        <span class="color" [ngClass]="{'none': isEnglish}">
+            <span [ngClass]="{'none': isEnglish}"class="highlight-text">I am </span>open to remote work     </span>
+
+            <span class="color" [ngClass]="{'none': !isEnglish}">
+            <span  class="highlight-text">Ich bin </span> offen für Remote-Arbeit     </span>
+        </div>
     </div>
 
-    <div class="open-to-relocate">
+    <div class="open-to-relocate-english">
         <img src="assets/img/Group 24.png" alt="">
-        <span class="color">
-            <span class="highlight-text">Ich bin </span> offen für einen Umzug
-        </span>
+        <div>
+        <span class="color" [ngClass]="{'none': isEnglish}">
+            <span  class="highlight-text">I am </span> open to moving   </span>
+
+            <span class="color" [ngClass]="{'none': !isEnglish}">
+            <span  class="highlight-text">Ich bin </span> offen für einen Umzug  </span>
+        </div>
     </div>
 </div>
 
 
 <div class="about-me">
-    <p>
-        Staying motivated to expand my IT skills requires a strategic approach, a curious mindset, and a commitment to the learning.
-        My ability to solve complex problems and my passion for programming make me a valuable member for your team.
+    <p [ngClass]="{'none': isEnglish}">
+        Staying motivated to expand my IT skills requires a strategic approach, a curious mindset, and a commitment to the learning.  
+        My ability to solve complex problems and my passion for programming make me a valuable member for your team.   
+    </p>
+
+    <p [ngClass]="{'none': !isEnglish}">
+        Um motiviert zu bleiben, meine IT-Kenntnisse zu erweitern, sind ein strategischer Ansatz, eine neugierige Denkweise und ein Engagement für das Lernen erforderlich.
+        Meine Fähigkeit, komplexe Probleme zu lösen und meine Leidenschaft für das Programmieren machen mich zu einem wertvollen Mitglied Ihres Teams
     </p>
   
     <div class="go-to-messenger">
-        <button (click)="scrollToContactMe()"> Let`s talk </button>
+        <button (click)="scrollToContactMe()" [ngClass]="{'none': isEnglish}"> Let`s talk </button>
+
+        <button (click)="scrollToContactMe()" [ngClass]="{'none': !isEnglish}">  Lass uns reden </button>
     </div>
 </div>
 

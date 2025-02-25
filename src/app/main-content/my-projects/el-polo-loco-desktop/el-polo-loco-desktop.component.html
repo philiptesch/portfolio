@@ -8,10 +8,12 @@
                     <div class="buttet-point-content">
                     <img class="bullet-point-img" src="assets/img/Ellipse 8.png" alt="">
                     </div>   
-                    <h6> Über das Projekt </h6>
+                    <h6 [ngClass]="{'none': isEnglish}"> About the project </h6>
+                    <h6 [ngClass]="{'none': !isEnglish}"> Über das Projekt </h6>
                 </div>
 
-                <span> {{ projects[1].description }} </span>
+                <span [ngClass]="{'none': isEnglish}"> {{ projectsEnglish[1].description }} </span>
+                <span [ngClass]="{'none': !isEnglish}"> {{ projects[1].description }} </span>
             </div>
 
             <div class="organised-my-work">
@@ -19,9 +21,11 @@
                     <div class="buttet-point-content">
                     <img class="bullet-point-img" src="assets/img/Ellipse 8.png" alt="">
                     </div>  
-                    <h6> Wie ich meine Arbeit organisiert habe </h6>
+                    <h6 [ngClass]="{'none': isEnglish}"> How I organized my work </h6>
+                    <h6 [ngClass]="{'none': !isEnglish}"> Wie ich meine Arbeit organisiert habe </h6>
                 </div>
-                <span> {{ projects[1].workOrganization }} </span>
+                <span [ngClass]="{'none': isEnglish}"> {{ projectsEnglish[1].workOrganization }} </span>
+                <span [ngClass]="{'none': !isEnglish}"> {{ projects[1].workOrganization }} </span>
             </div>
 
             <div class="my-group-work-experience">
@@ -29,11 +33,20 @@
                     <div class="buttet-point-content">
                         <img class="bullet-point-img" src="assets/img/Ellipse 8.png" alt="">
                         </div>  
-                    <h6> {{ projects[1].experience }} </h6>
+                        <h6 [ngClass]="{'none': isEnglish}"> {{ projectsEnglish[1].experience }} </h6>
+                        <h6 [ngClass]="{'none': !isEnglish}"> {{ projects[1].experience }} </h6>
                 </div>
-                <span> {{ projects[1].groupExperience }} </span>
+                <span [ngClass]="{'none': isEnglish}"> {{ projectsEnglish[1].groupExperience }} </span>
+                <span [ngClass]="{'none': !isEnglish}"> {{ projects[1].groupExperience }} </span>
             </div>
 
+
+
+            
+            <div class="button-live-test-mobile">
+                <button class="liveTestBtn">Live Test</button>
+                <button class="gitHubBtn">GitHub</button>
+            </div>
 
             
 
@@ -54,8 +67,18 @@
             </div>
             </div>
 
+            <div class="mobile-view">
+                <h3> {{ projects[1].name }} </h3>
+                <span [ngClass]="{'none': isEnglish}" class="intro"> Technologien: {{ projectsEnglish[1].technologies }} </span>
+                <span [ngClass]="{'none': !isEnglish}" class="intro"> duration: {{ projectsEnglish[1].duration }} </span>
+    
+                <span [ngClass]="{'none': isEnglish}" class="intro"> Technologies: {{ projectsEnglish[1].technologies }} </span>
+                <span  [ngClass]="{'none': !isEnglish}" class="intro"> Dauer: {{ projects[1].duration }} </span>
+                 </div>
 
+            <div class="project_img-content">
             <img class="project-img" src="{{ projects[1].image }}" alt="">
+            </div>   
 
 
         </div>

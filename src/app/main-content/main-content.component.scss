@@ -32,5 +32,13 @@ $fontAnt: 'Anta';
       flex-direction: column;
       align-items: center;
       width: 100vw;
+
+
+      @media (max-height:700px)  {
+        width: 125vw;
+      }
   
 }
+
+
+

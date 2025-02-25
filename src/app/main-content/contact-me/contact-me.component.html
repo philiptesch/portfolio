@@ -2,16 +2,21 @@
 
 
     <div class="headline">
-    <h1 class="fontAnt">Contact me</h1>
+    <h1 class="fontAnt" [ngClass]="{'none': isEnglish}">Contact me</h1>
+    <h1 class="fontAnt" [ngClass]="{'none': !isEnglish}">Kontaktieren Sie mich</h1>
     <img class="arrowIcon" src="assets/img/{{ arrow }}" (click)="onHoverArrow(true); scrollToMainContent()">
     </div>
 
     <div class="my-contact">
 
+        <span [ngClass]="{'none': isEnglish}"> 
+        Are you still not sure whether I am the right web developer for your project?
+        Don’t hesitate to contact me – I look forward to contributing my work to your projects!
+        </span>
 
-        <span> 
-            Still not sure if I am the right person for your project? Lorem ipsum dolor sit amet consectetur.
-             Nat oqueg diam  prjfgh etium arcu sed senectus felis acm uris. Dui eget dict um.osuere pretium arcu sed senec tusfelis ac
+        <span [ngClass]="{'none': !isEnglish}"> 
+            Sind Sie sich noch nicht sicher, ob ich der richtige Webentwickler für Ihr Projekt bin?
+             Zögern Sie nicht, mich zu kontaktieren – ich freue mich darauf, mit meiner Arbeit zu Ihren Projekten beizutragen!
         </span>
 
 
@@ -37,50 +42,77 @@
         <form (ngSubmit)="onSubmit(contactform)" #contactform="ngForm">
         <div class="your-contact-info"> 
             <div class="your-name">
-                <label>Your Name</label>
+                <label [ngClass]="{'none': isEnglish}">Your Name</label>
+                <label [ngClass]="{'none': !isEnglish}">Ihr Name</label>
                 <input autocomplete="off" (blur)="checkEnterName()" id="username" #usernameInput [(ngModel)]="contactData.name"  name="username"  class="name-input-Field"
-                 type="text" placeholder="Ihre Name" required  [ngClass]="{ 'invalid-input': nameInvalid }">
+                 type="text"  [placeholder]="!isEnglish ? 'Your Name' : 'Ihr Name'" required  [ngClass]="{ 'invalid-input': nameInvalid }">
 
-                 <span *ngIf="nameInvalid" class="error-text"> *Bitte vollständigen Namen eingeben!</span>
+
+                 <span [ngClass]="{'none': isEnglish}" *ngIf="nameInvalid" class="error-text"> *Please enter full name!</span>
+                 <span  [ngClass]="{'none': !isEnglish}"*ngIf="nameInvalid" class="error-text"> *Bitte vollständigen Namen eingeben!</span>
             </div>
     
             <div class="your-email">
-                <label>Your Email</label>
-                <input autocomplete="off" (blur)="checkEnterMail()"  id="userEmail"  #useremailInput [(ngModel)]="contactData.email" name="userEmail"  class="email-input-Field" type="email" placeholder="Ihre E-Mail"
-                [ngClass]="{ 'invalid-input': emailInvalid }" required>
-                <span *ngIf="emailInvalid" class="error-text">Bitte E-Mail Adresse eintragen!!!</span>
+                <label [ngClass]="{'none': isEnglish}">Your Email</label>
+                <label [ngClass]="{'none': !isEnglish}">Ihre E-Mail</label>
+                <input autocomplete="off" 
+                       (blur)="checkEnterMail()" 
+                       id="userEmail"  
+                       #useremailInput 
+                       [(ngModel)]="contactData.email" 
+                       name="userEmail"  
+                       class="email-input-Field" 
+                       type="email" 
+                       [placeholder]="!isEnglish ? 'Your E-Mail' : 'Ihre E-Mail'"
+                       [ngClass]="{ 'invalid-input': emailInvalid }" 
+                       required>
+                <span *ngIf="emailInvalid"  [ngClass]="{'none': isEnglish}"class="error-text"> *Please enter your email address!!!</span>
+                <span *ngIf="emailInvalid"  [ngClass]="{'none': !isEnglish}"class="error-text">*Bitte E-Mail Adresse eintragen!!!</span>
             </div>
         </div>
     
         <div class="your-message-content">
-            <label>Your Message</label>
+            <label [ngClass]="{'none': isEnglish}">Your Message</label>
+            <label [ngClass]="{'none': !isEnglish}">Ihre Nachricht</label>
             <div class="your-message-text">
                 <textarea autocomplete="off" (blur)="checkEnterMessage()" [(ngModel)]="contactData.message" name="userMessage" class="message-input-Field"
-                [ngClass]="{ 'invalid-input': messageInvalid }"    id="userMessage"  #usermessageInput      placeholder="Ihre Nachricht" required>
+                [ngClass]="{ 'invalid-input': messageInvalid }"    id="userMessage"  #usermessageInput        [placeholder]="!isEnglish ? 'Your Message' : 'Ihre Nachricht'" required>
 
 
                 </textarea>
             </div>
-            <span *ngIf="messageInvalid" class="error-text"> *Bitte eine Nachricht eingeben!!!</span>
+            <span [ngClass]="{'none': isEnglish}" *ngIf="messageInvalid" class="error-text"> *Please enter a message!!!</span>
+            <span [ngClass]="{'none': !isEnglish}" *ngIf="messageInvalid" class="error-text"> *Bitte eine Nachricht eingeben!!!</span>
         </div>
 
         <div class="checked"> 
 
             <img class="checkIcon" src="assets/img/{{ isChecked }}" alt="" (click)="checkPrivacy()">
-            <span> I've read the 
-                <a href="#"> privacy policy </a>    
+            <span [ngClass]="{'none': isEnglish}"> I've read the 
+                <a [ngClass]="{'none': isEnglish}" [routerLink]="'/terms/privacy-policy'">Privacy Policy</a>
                 and agree to the processing of my data as outlined.
             </span>
-        </div>
-        <span *ngIf="checked" class="error-text"> *Bitte lesen und akzeptieren Sie die Datenschutzbestimmungen!!!</span>
 
+
+            <span [ngClass]="{'none': !isEnglish}"> Das habe ich gelesen
+                <a [ngClass]="{'none': !isEnglish}" [routerLink]="'/terms/privacy-policy'">Datenschutzrichtlinie</a>
+                und stimme der oben beschriebenen Verarbeitung meiner Daten zu.
+            </span>
+
+
+        </div>
+        <span [ngClass]="{'none': isEnglish}" *ngIf="checked" class="error-text"> *Please read and accept the privacy policy!!!</span>
+
+
+        <span [ngClass]="{'none': !isEnglish}" *ngIf="checked" class="error-text"> *Bitte lesen und akzeptieren Sie die Datenschutzbestimmungen!!!</span>
 
         <div class="button-content">
-            <button [disabled]="!isFormValid">Send</button>
+            <button [ngClass]="{'none': isEnglish}" [disabled]="!isFormValid">Send</button>
+            <button  [ngClass]="{'none': !isEnglish}" [disabled]="!isFormValid">Senden</button>
         </div>
     </form>
     </div>
 
-    
+    <img class="arrowIconMboile" src="assets/img/{{ arrow }}" (click)="onHoverArrow(true); scrollToMainContent()">
 
 </section>

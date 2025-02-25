@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-my-skills',
@@ -12,8 +13,19 @@ export class MySkillsComponent {
 
 
   isClicked: boolean = false;
+  isEnglish:boolean =false;
+
+  constructor(private languageService: LanguageService) {}
+
+
+  ngOnInit() {
+    this.languageService.isEnglish$.subscribe((status) => {
+      this.isEnglish = status; 
+    });
+  }
+
 
   onIconClick() {
-    this.isClicked = !this.isClicked;  // Toggle die isClicked-Variable
+    this.isClicked = !this.isClicked; 
   }
 }

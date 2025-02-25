@@ -1,0 +1,45 @@
+section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 120px 60px;
+    color: white;
+    line-height: 1.6;  
+    text-align: justify; 
+
+
+    @media (max-width: 1600px) {
+        padding: 100px 50px;  
+        font-size: 18px; 
+        width: 80%;
+
+        }
+
+   
+    @media (max-width: 1200px) {
+        padding: 80px 50px;
+        font-size: 16px; 
+
+    }
+
+    @media (max-width: 870px) {
+        padding: 60px 50px;  
+        font-size: 14px; 
+        line-height: 1.4; 
+    }
+
+    
+    @media (max-width: 650px) {
+    }
+
+
+    @media (max-width: 470px) {
+  
+    }
+
+    @media (max-width: 390px) {
+   
+        padding: 60px 25px;
+    }
+}
