@@ -28,4 +28,14 @@ export class MySkillsComponent {
   onIconClick() {
     this.isClicked = !this.isClicked; 
   }
+
+  onIconHover(hovered: boolean) {
+    this.isClicked = hovered
+  }
+
+  onIconHoverMouseEnter(hovered: boolean) {
+    this.isClicked = hovered
+  }
 }
+
+

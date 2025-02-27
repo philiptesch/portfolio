@@ -13,6 +13,9 @@ section {
     font-size: 60px;
     margin-block-end: 35px;
     margin-block-start: 50px;
+    opacity: 0;
+    animation: fadeFormAbove 650ms ease-out forwards;
+    animation-delay: 550ms; 
 
 
     @media (max-width:720px) {
@@ -103,6 +106,9 @@ section {
     font-weight: 400;
     font-size:36px;
     cursor: pointer;
+    opacity: 0;
+    animation: fadeFormAbove 650ms ease-out forwards;
+    animation-delay: 550ms; 
 
 
     @media (max-width:720px) {
@@ -118,4 +124,17 @@ section {
 
   .none {
     display: none !important;
+  }
+
+
+  @keyframes fadeFormAbove {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  
   }

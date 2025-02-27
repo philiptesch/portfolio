@@ -80,14 +80,7 @@
 
         }
 
-        .intro {
-            color: #F8F5EC;
-            font-weight: 400;
-            font-size:14px;
-            line-height: 20px;
-            opacity: 0;
-            animation: fadeInLeft  ease-in-out forwards 1.5s;
-        }
+    
 
 
    
@@ -213,8 +206,6 @@ h3 {
     font-weight: 400;
     font-size:14px;
     line-height: 20px;
-    opacity: 0;
-    animation: fadeInLeft  ease-in-out forwards 1.5s;
 }
 
 
@@ -536,6 +527,7 @@ h3 {
         animation: fadeInUp 0.9s ease-in-out forwards;
         animation-delay: 1.6s; 
         cursor: pointer;
+        text-decoration: none;
 
         &:hover {
             color: white;
@@ -554,6 +546,7 @@ h3 {
         animation: fadeInUp 0.9s ease-in-out forwards;
         animation-delay: 1.8s; 
         cursor: pointer;
+        text-decoration: none;
 
         &:hover {
             color: white;
@@ -602,6 +595,7 @@ h3 {
         animation: fadeInUp 0.9s ease-in-out forwards;
         animation-delay: 1.6s; 
         cursor: pointer;
+        text-decoration: none;
 
         &:hover {
             color: white;
@@ -620,6 +614,7 @@ h3 {
         animation: fadeInUp 0.9s ease-in-out forwards;
         animation-delay: 1.8s; 
         cursor: pointer;
+        text-decoration: none;
 
         &:hover {
             color: white;
@@ -688,4 +683,11 @@ h3 {
 
   .none {
     display: none !important;
+  }
+
+
+  
+  .animate {
+    opacity: 0;
+    animation: fadeInLeft  ease-in-out forwards 1.5s;
   }

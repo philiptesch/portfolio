@@ -7,7 +7,7 @@ section {
 
 
     @media (max-height: 720px) {
-        margin-top: 250px;
+        margin-top: 100px;
     }
 
     @media (max-width: 720px) {
@@ -471,7 +471,7 @@ main {
         display: none;
      }
 
-    button {
+    a {
         border: solid 1px #89BCD9;
         background-color: #262E34;
         padding: 13px 20px;
@@ -484,6 +484,7 @@ main {
         animation: fadeInButton 1000ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
         animation-delay: 1000ms; 
         cursor: pointer;    
+        text-decoration: none;
 
 
     

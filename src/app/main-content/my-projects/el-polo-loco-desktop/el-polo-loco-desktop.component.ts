@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, AfterViewInit  } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { CommonModule } from '@angular/common';
 
@@ -9,9 +9,16 @@ import { CommonModule } from '@angular/common';
   templateUrl: './el-polo-loco-desktop.component.html',
   styleUrl: './el-polo-loco-desktop.component.scss'
 })
-export class ElPoloLocoDesktopComponent {
+export class ElPoloLocoDesktopComponent implements AfterViewInit  {
 
 
+
+  ngAfterViewInit(): void { 
+    let introElement = document.getElementById('intro');
+    if (introElement) {
+      introElement.classList.add('animate');
+    }
+  }
 
   isEnglish: boolean = false; 
    @Input() projects: any;

@@ -44,10 +44,9 @@
 
             
             <div class="button-live-test-mobile">
-                <button class="liveTestBtn">Live Test</button>
-                <button class="gitHubBtn">GitHub</button>
+                <a href="https://philip-tesch.de/ell-polo-loco/index.html" target="_blank" class="liveTestBtn">Live Test</a>
+                <a href="https://github.com/philiptesch/ellPoloLoco" target="_blank" class="gitHubBtn">GitHub</a>
             </div>
-
             
 
             
@@ -69,11 +68,11 @@
 
             <div class="mobile-view">
                 <h3> {{ projects[1].name }} </h3>
-                <span [ngClass]="{'none': isEnglish}" class="intro"> Technologien: {{ projectsEnglish[1].technologies }} </span>
-                <span [ngClass]="{'none': !isEnglish}" class="intro"> duration: {{ projectsEnglish[1].duration }} </span>
+                <span id="intro" [ngClass]="{'none': !isEnglish}" class="intro"> Technologien: {{ projectsEnglish[1].technologies }} </span>
+                <span id="intro"  [ngClass]="{'none': !isEnglish}" class="intro"> duration: {{ projectsEnglish[1].duration }} </span>
     
-                <span [ngClass]="{'none': isEnglish}" class="intro"> Technologies: {{ projectsEnglish[1].technologies }} </span>
-                <span  [ngClass]="{'none': !isEnglish}" class="intro"> Dauer: {{ projects[1].duration }} </span>
+                <span  id="intro" [ngClass]="{'none': isEnglish}" class="intro"> Technologies: {{ projectsEnglish[1].technologies }} </span>
+                <span  id="intro"  [ngClass]="{'none': isEnglish}" class="intro"> Dauer: {{ projects[1].duration }} </span>
                  </div>
 
             <div class="project_img-content">
@@ -84,10 +83,9 @@
         </div>
 
         <div class="button-live-test">
-            <button class="liveTestBtn">Live Test</button>
-            <button class="gitHubBtn">GitHub</button>
+            <a href="https://philip-tesch.de/ell-polo-loco/index.html" target="_blank" class="liveTestBtn">Live Test</a>
+            <a href="https://github.com/philiptesch/ellPoloLoco" target="_blank" class="gitHubBtn">GitHub</a>
         </div>
-
 
 
       </div>

@@ -23,7 +23,7 @@ export class MyProjectsComponent {
   projects = [
     {
       name: 'Join Project',
-      technologies: 'HTML, CSS, JavaScript',
+      technologies: 'HTML, CSS, JavaScript, Github, Firebase',
       duration: '2 Monate',
       image: 'assets/img/join_project (1).png',
       description: 'Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.',
@@ -33,13 +33,13 @@ export class MyProjectsComponent {
     },
     {
       name: 'El Pollo Loco ',
-      technologies: 'Angular, TypeScript, Firebase',
+      technologies: 'CSS, JavaScript, HTML',
       duration: '5 Wochen',
       image: 'assets/img/game_project.png',
-      description: 'Ein einfaches Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Chiliflaschen zu finden, um gegen die wilden Hühner zu kämpfen..',
-      workOrganization: 'Ich habe mit Scrum und agilen Methoden meine Arbeit organisiert.',
-      experience: 'meine Erfahrungen',
-      groupExperience: 'Ich habe die Datenbank-Integration und das User-Management übernommen.'
+      description: 'Ein Jump-and-Run-Spiel im objektorientierten Ansatz. Hilf Pepe, Münzen und Chiliflaschen zu sammeln, um gegen wilde Hühner zu kämpfen.',
+      workOrganization: 'ich entwickelte eine objektorientierte Architektur zur Steuerung der Charakterbewegung und des Sammelns von Items.“',
+      experience: 'Meine Erfahrung in der Gruppenarbeit',
+      groupExperience: 'Ich war für die Spielmechanik verantwortlich und fügte die Lebensregeneration des Endgegners durch das Fressen kleiner Feinde hinzu.“'
     }
   ];
 
@@ -59,11 +59,11 @@ export class MyProjectsComponent {
       technologies: 'Angular, TypeScript, Firebase',
       duration: '5 weeks',
       image: 'assets/img/game_project.png',
-      description: 'A simple jump-and-run game based on an object-oriented approach. Help Pepe find coins and chili bottles to fight against the wild chickens.',
-      workOrganization: 'I organized my work using Scrum and agile methods.',
-      experience: 'My experiences',
-      groupExperience: 'I took care of the database integration and user management.'
-    }
+      description: 'A jump-and-run game based on an object-oriented approach. Help Pepe collect coins and chili bottles to fight against wild chickens.',
+      workOrganization: 'I developed an object-oriented architecture to control character movement and item collection.',
+      experience: 'My experience in teamwork',
+  groupExperience: 'I was responsible for the gameplay mechanics and added the final boss\' health regeneration by eating smaller enemies.'
+    },
   ];
 
   constructor(private projectStateService: ProjectStateService,private languageService: LanguageService ) {

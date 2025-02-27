@@ -18,12 +18,12 @@ export class HeaderComponent {
   hoveredSocialIconGitHub:boolean = false;
   hoveredBgShape:boolean = false;
   isMenuOpen: boolean = false;
-  logoImg: string = 'logo.png'
+  logoImg: string = 'Logo icon.png'
   iconGitHub: string = 'Property 1=default (2).png'
   iconLinkedin: string = 'Property 1=default (4).png'
   iconEmail: string = 'Property 1=default (3).png'
   bgShape: string = 'Property 1=hover.png'
-  arrow = 'arrow-down-hover.png';
+  arrow = 'Arrow down.png';
   hoverdArrow: boolean = false;
   screenWidth: number = window.innerWidth; 
   isEnglish:boolean =false;
@@ -52,13 +52,13 @@ export class HeaderComponent {
     }
   }
 
-  onHover(hovered: boolean) {
+  onHoverLogo(hovered: boolean) {
     this.hoveredLogo = hovered
     if (this.hoveredLogo) {
-      this.logoImg = 'logo_hover (1).png'
+      this.logoImg = 'logo_icon_large.png'
       
     }else {
-      this.logoImg = 'logo.png'
+      this.logoImg = 'Logo icon.png'
   }
   }
   
@@ -115,6 +115,7 @@ export class HeaderComponent {
       }, 500);
     }
   }
+  
 
 
   onHoverArrow(hovered: boolean) {

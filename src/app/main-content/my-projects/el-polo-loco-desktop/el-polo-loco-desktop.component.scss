@@ -69,7 +69,7 @@
             color: #89BCD9;
             font-weight: 400;
             font-size:24px;
-            margin-block-start: 20px;
+            margin-block-start: 0px;
 
             
             @media (max-width:720px) {
@@ -79,14 +79,7 @@
 
         }
 
-        .intro {
-            color: #F8F5EC;
-            font-weight: 400;
-            font-size:14px;
-            line-height: 20px;
-            opacity: 0;
-            animation: fadeInLeft  ease-in-out forwards 1.5s;
-        }
+      
 
 
    
@@ -198,7 +191,7 @@
     @media (max-width:720px) {
         display: flex;
         flex-direction: column;
-        margin-top: -30px;
+        margin-top: 15px;
     }
 }
 
@@ -207,7 +200,7 @@ h3 {
     color: #89BCD9;
     font-weight: 400;
     font-size:24px;
-    margin-block-start: 20px;
+    margin-block-start: 0px;
 }
 
 .intro {
@@ -215,9 +208,12 @@ h3 {
     font-weight: 400;
     font-size:14px;
     line-height: 20px;
-    opacity: 0;
-    animation: fadeInLeft  ease-in-out forwards 1.5s;
+
 }
+ 
+
+
+
 
 
   .organised-my-work {
@@ -305,6 +301,11 @@ h3 {
 
   }
 
+
+  .animate {
+    opacity: 0;
+    animation: fadeInLeft  ease-in-out forwards 1.5s;
+  }
 
 
   .my-group-work-experience {
@@ -516,6 +517,7 @@ h3 {
     gap: 22px;
     padding: 30px 10px 5px 70px;
     justify-content: center;
+    text-decoration: none;
     
 
     @media (max-width:850px) {
@@ -538,6 +540,7 @@ h3 {
         animation: fadeInUp 0.9s ease-in-out forwards;
         animation-delay: 1.6s; 
         cursor: pointer;
+        text-decoration: none;
 
         &:hover {
             color: white;
@@ -556,6 +559,7 @@ h3 {
         animation: fadeInUp 0.9s ease-in-out forwards;
         animation-delay: 1.8s; 
         cursor: pointer;
+        text-decoration: none;
 
         &:hover {
             color: white;
@@ -584,7 +588,7 @@ h3 {
     @media (max-width:720px) {
     display: flex;
     gap: 22px;
-    padding: 60px 10px 5px 0px;
+    padding: 20px 10px 5px 0px;
     justify-content: center;
     }
 
@@ -604,6 +608,7 @@ h3 {
         animation: fadeInUp 0.9s ease-in-out forwards;
         animation-delay: 1.6s; 
         cursor: pointer;
+        text-decoration: none;
 
         &:hover {
             color: white;
@@ -622,6 +627,7 @@ h3 {
         animation: fadeInUp 0.9s ease-in-out forwards;
         animation-delay: 1.8s; 
         cursor: pointer;
+        text-decoration: none;
 
         &:hover {
             color: white;

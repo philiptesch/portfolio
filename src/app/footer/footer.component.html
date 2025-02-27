@@ -10,17 +10,29 @@
     </div>
 
 
-    <div class="logo">
-        <img src="assets/img/Logo dark mob.png" alt="">
-    </div>
+    <div class="logo-Content">
+        <img class="logo"  src="assets/img/Logo dark mob.png" alt="">
+        <span>P.Tesch</span>
+        <span class="developer" [ngClass]="{'none': isEnglish}">DEVELOPER</span>
+        <span class="developer" [ngClass]="{'none': !isEnglish}">ENTWICKLER</span>
+        </div>
 
 
     <div class="social-media-icons">
 
+        <a href="https://github.com/" target="_blank">
         <img src="assets/img/{{ iconGitHub }}" alt="" (mouseenter)="onHoverGitHub(true)" (mouseleave)="onHoverGitHub(false)">
-        <img src="assets/img/{{ iconEmail  }}" alt="" (mouseenter)="onHoverEmail(true)" (mouseleave)="onHoverEmail(false)">
-        <img src="assets/img/{{ iconLinkedin }}" alt="" (mouseenter)="onHoverLinkedin(true)" (mouseleave)="onHoverLinkedin(false)">
+        </a>
 
+
+        <a  href="mailto:philip.tesch.developer@gmail.com" target="_blank">
+        <img src="assets/img/{{ iconEmail  }}" alt="" (mouseenter)="onHoverEmail(true)" (mouseleave)="onHoverEmail(false)">
+        </a>   
+        
+        
+        <a href="https://www.linkedin.com/in/philip-tesch-b3b0871aa/" target="_blank">
+        <img src="assets/img/{{ iconLinkedin }}" alt="" (mouseenter)="onHoverLinkedin(true)" (mouseleave)="onHoverLinkedin(false)">
+         </a>
 
 
     </div>

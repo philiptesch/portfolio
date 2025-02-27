@@ -5,8 +5,8 @@
 
 <main>
 <div class="about-me-lovation-info">
-    <div class="located-city-english">
-        <img src="assets/img/Group 60 (1).png" alt="">
+    <div [ngClass]="!isEnglish ? 'located-city-english' : 'located-city'">
+        <img src="assets/img/Group 60 (1).png" alt="" >
         <div>
         <span class="color" [ngClass]="{'none': isEnglish}" >
             <span class="highlight-text"> I am in</span>   in the Rhine-Nahe area </span>
@@ -27,7 +27,7 @@
         </div>
     </div>
 
-    <div class="open-to-relocate-english">
+    <div  [ngClass]="!isEnglish ? 'open-to-relocate-english' : 'open-to-relocate'">
         <img src="assets/img/Group 24.png" alt="">
         <div>
         <span class="color" [ngClass]="{'none': isEnglish}">
@@ -52,9 +52,8 @@
     </p>
   
     <div class="go-to-messenger">
-        <button (click)="scrollToContactMe()" [ngClass]="{'none': isEnglish}"> Let`s talk </button>
-
-        <button (click)="scrollToContactMe()" [ngClass]="{'none': !isEnglish}">  Lass uns reden </button>
+        <a href="#contact" [ngClass]="{'none': isEnglish}"> Let`s talk </a>
+        <a  href="#contact" [ngClass]="{'none': !isEnglish}"> Lass uns reden </a>
     </div>
 </div>
 

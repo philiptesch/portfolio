@@ -1,4 +1,4 @@
-<section>
+<section id="skills">
 
     <h1 class="fontAnt" [ngClass]="{'none': isEnglish}"> My Skills</h1>
     <h1 class="fontAnt" [ngClass]="{'none': !isEnglish}"> Meine Fähigkeiten</h1>
@@ -51,7 +51,7 @@
         
         
         <div class="learning-icon-content animate-fade-in">
-            <div class="continually-icon" (click)="onIconClick()"> 
+            <div class="continually-icon" (mouseenter)="onIconHover(true)" (mouseleave)="onIconHoverMouseEnter(false)"> 
             <img class="learning-icon-img" src="assets/img/mortarboard.png" alt="">
 
              <div class="circle_icon-content">
@@ -69,7 +69,6 @@
 
         <div class="bg_Ellipse_content">
 
-            <img class="bg_Ellipse-img" src="assets/img/Ellipse BG.png" alt="">
 
             <div class="continually-learning-content">   
 
@@ -98,8 +97,8 @@
 
 
 <div class="go-to-messenger">
-    <button [ngClass]="{'none': isEnglish}"> Let`s talk </button>
-    <button [ngClass]="{'none': !isEnglish}"> Lass uns reden </button>
+    <a href="#contact" [ngClass]="{'none': isEnglish}"> Let`s talk </a>
+    <a  href="#contact" [ngClass]="{'none': !isEnglish}"> Lass uns reden </a>
 </div>
 
 </section>

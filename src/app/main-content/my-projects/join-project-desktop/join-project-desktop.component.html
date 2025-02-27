@@ -42,11 +42,10 @@
             </div>
 
 
-            <div class="button-live-test-mobile">
-                <button class="liveTestBtn">Live Test</button>
-                <button class="gitHubBtn">GitHub</button>
+            <div id="mobile-Button" class="button-live-test-mobile">
+                <a href="https://philip-tesch.de/Join/login.html" target="_blank" class="liveTestBtn">Live Test</a>
+                <a href="https://github.com/Getinger96/Join" target="_blank" class="gitHubBtn">GitHub</a>
             </div>
-
 
             
 
@@ -65,16 +64,18 @@
             <img class="technologi-img" src="assets/img/html.png" alt="">
             <img class="technologi-img" src="assets/img/Javascript.png" alt="">
             <img class="technologi-img" src="assets/img/css.png" alt="">
+            <img class="technologi-img" src="assets/img/git.png" alt="">
+            <img class="technologi-img" src="assets/img/firebase.png" alt="">
             </div>
             </div>
 
-            <div class="mobile-view">
+            <div class="mobile-view" id="intro" >
             <h3> {{ projects[0].name }} </h3>
-            <span [ngClass]="{'none': isEnglish}" class="intro"> Technologien: {{ projectsEnglish[0].technologies }} </span>
-            <span [ngClass]="{'none': !isEnglish}" class="intro"> duration: {{ projectsEnglish[0].duration }} </span>
+            <span   [ngClass]="{'none': isEnglish}" class="intro"> Technologien: {{ projectsEnglish[0].technologies }} </span>
+            <span   [ngClass]="{'none': isEnglish}" class="intro"> duration: {{ projectsEnglish[0].duration }} </span>
 
-            <span [ngClass]="{'none': isEnglish}" class="intro"> Technologies: {{ projectsEnglish[0].technologies }} </span>
-            <span  [ngClass]="{'none': !isEnglish}" class="intro"> Dauer: {{ projects[0].duration }} </span>
+            <span [ngClass]="{'none': !isEnglish}" class="intro"> Technologies: {{ projectsEnglish[0].technologies }} </span>
+            <span    [ngClass]="{'none': !isEnglish}" class="intro"> Dauer: {{ projects[0].duration }} </span>
              </div>
 
              <div class="project_img-content">
@@ -85,8 +86,8 @@
         </div>
 
         <div class="button-live-test">
-            <button class="liveTestBtn">Live Test</button>
-            <button class="gitHubBtn">GitHub</button>
+            <a href="https://philip-tesch.de/Join/login.html" target="_blank" class="liveTestBtn">Live Test</a>
+            <a href="https://github.com/Getinger96/Join" target="_blank" class="gitHubBtn">GitHub</a>
         </div>
 
 

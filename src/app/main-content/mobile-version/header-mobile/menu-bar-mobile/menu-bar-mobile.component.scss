@@ -1,11 +1,16 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+
 div {
-    position: absolute;
+    position: relative;
     top: 0;
-    left: 0;
+    left: 0px;
     right: 0;
     justify-content: center;
     display: flex;
-    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    transition: transform 0.4sease-in-out, opacity 0.4sease-in-out;
 
 
     >img {
@@ -14,6 +19,7 @@ div {
 
         @media (max-width: 400px) {
             width: 255px;
+            
     
         }
     }
@@ -26,6 +32,7 @@ div {
 
 
 .menu-bar-mobile-links {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,6 +75,41 @@ div {
 }
 
 
+
+.translator {
+    position: relative;
+    display: flex;
+    gap: 25px;    
+    cursor: pointer;
+>p {
+    font-weight: 400;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        color: white;
+        background-color:#262E341F;
+        border-radius: 20px;
+
+    }
+
+}
+}
+
+
+.focus {
+     color: white;
+
+}
+
+
 .hidden {
+    display: none;
+  }
+
+
+  .none {
     display: none;
   }

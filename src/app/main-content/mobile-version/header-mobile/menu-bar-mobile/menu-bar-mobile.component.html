@@ -4,17 +4,36 @@
     <img class="bg-shape-img" src="../../../assets/img/Bg shape for Photo.png" alt=""> 
 
 
-    <div  class="menu-bar-mobile-links">
-        <a href="#">Why me </a>
-        <a href="#">Skills </a>
-        <a href="#">Prjects </a>
-        <a href="#">Contact </a>
+    <div class="developer" *ngIf="!isEnglish"  class="menu-bar-mobile-links">
+        <a (click)="focusColor('why-me')" [ngClass]="{'focus': clicked === 'why-me'}" href="#why-me">Why me </a>
+        <a (click)="focusColor('skills')" [ngClass]="{'focus': clicked === 'skills'}" href="#skills">Skills </a>
+        <a (click)="focusColor('project')" [ngClass]="{'focus': clicked === 'project'}" href="#project">Projects </a>
+        <a (click)="focusColor('contact')" [ngClass]="{'focus': clicked === 'contact'}"  href="#contact">Contact </a>
 
         <div class="translator fontJosefin">
-        <p class="fontJosefin"> DE</p> 
-        <p class="fontJosefin"> EN </p> 
+        <p [ngClass]="{'focus': isEnglish}" class="fontJosefin"  (click)="translateInEnglish()"> DE</p> 
+        <p [ngClass]="{'focus': !isEnglish}"class="fontJosefin"  (click)="translateInEnglish()"> EN </p> 
         </div>
 
         
     </div>
+
+
+
+    <div class="developer"  *ngIf="isEnglish"   class="menu-bar-mobile-links">
+        <a (click)="focusColor('why-me')" [ngClass]="{'focus': clicked === 'why-me'}" href="#why-me">Warum ich </a>
+        <a (click)="focusColor('skills')" [ngClass]="{'focus': clicked === 'skills'}" href="#skills">Fähigkeiten </a>
+        <a  (click)="focusColor('project')" [ngClass]="{'focus': clicked === 'project'}" href="#project">Projekte </a>
+        <a  (click)="focusColor('contact')" [ngClass]="{'focus': clicked === 'contact'}" href="#contact">Kontakt </a>
+
+        <div class="translator fontJosefin">
+        <p  [ngClass]="{'focus': isEnglish}" class="fontJosefin" (click)="translateInEnglish()"> DE</p> 
+        <p  [ngClass]="{'focus': !isEnglish}"class="fontJosefin" (click)="translateInEnglish()"> EN </p> 
+        </div>
+
+        
+    </div>
+
+
+
 </div>

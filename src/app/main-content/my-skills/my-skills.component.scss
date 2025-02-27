@@ -51,9 +51,6 @@ display: none;
   max-width: 250px;
   text-align: center;
   margin-bottom: 30px;
-  opacity: 0;
-  animation: fadeInAboutMe 900ms ease-out forwards;
-  animation-delay: 900ms; 
   }
 
   @keyframes fadeInAboutMe {
@@ -215,7 +212,32 @@ display: none;
       opacity: 0;
       animation: fadeInAboutMe 900ms ease-out forwards;
       animation-delay: 900ms; 
+      height: 430px;
+      width: 430px;
+      transform: rotate(180deg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-position: center;
+      background-image: url(../../../assets/img/Ellipse\ BG.png);
 
+      &:hover {
+        background-image: url(../../../assets/img/shape_hover.png);
+
+      }
+
+
+      @media (max-width: 1090px) {
+        height: 370px;
+        width: 370px;
+    }
+
+
+     
+    @media (max-width: 900px) {
+      height: 350px;
+      width: 350px;
+}
 
       @keyframes fadeInAboutMe {
           from {
@@ -230,28 +252,6 @@ display: none;
       }
     
     
-
-
-      .bg_Ellipse-img {
-        height: 430px;
-        width: 430px;
-        transform: rotate(180deg);
-
-
-
-        @media (max-width: 1090px) {
-          height: 370px;
-          width: 370px;
-      }
-
-
-
-      
-      @media (max-width: 900px) {
-        height: 350px;
-        width: 350px;
-}
-      }
 
 
     }
@@ -315,6 +315,9 @@ display: none;
       font-size: 16px;
   }
 
+  @media (max-width: 1090px) {
+    font-size: 14px;
+}
 
 
       
@@ -600,7 +603,14 @@ position: relative;
   justify-content: center;
   margin-top: 50px;
 
-button {
+
+  @media (max-width: 720px) {
+    display: none
+  
+    }
+  
+
+a {
   border: solid 1px #89BCD9;
   background-color:  #89BCD9;
   padding: 13px 20px;
@@ -613,7 +623,14 @@ button {
   transform: translate(60px, -80px);
   animation: fadeInButton 0.8s ease-out forwards;
   animation-delay: 0.8s; 
+  text-decoration: none !important;
+  
+  .none {
+  display: none !important;
   cursor: pointer;
+
+}
+
 
   &:hover {
     color: white;

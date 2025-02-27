@@ -2,22 +2,34 @@
 
 
     <div class="mobile-header">
-        <img class="logo"  src="assets/img/logo.png" alt="">
+        <div class="logo-Content-mobile">
+        <img class="logo"  src="assets/img/Logo icon.png" alt="">
+        <span>P.Tesch</span>
+        <span class="developer" [ngClass]="{'none': isEnglish}">DEVELOPER</span>
+        <span class="developer" [ngClass]="{'none': !isEnglish}">ENTWICKLER</span>
+        </div>
         <img class="menu-img" src="assets/img/Property 1=default.png" alt="" (click)="openMenuBar()"> 
     </div>
 
 <div class="imgSection">
-<div class="profil-img-content"  data-aos="fade-down">
-    <img [ngClass]="{'hidden': isMenuOpen}" class="profile-picture-img" src="assets/img/profilbild.png" alt="">
-    <app-menu-bar-mobile  *ngIf="isMenuOpen && screenWidth < 720" [isMenuOpen]="isMenuOpen"></app-menu-bar-mobile>
+<div  [ngClass]="{'none': isMenuOpen}"class="profil-img-content"  data-aos="fade-down">
+    <img  class="profile-picture-img" src="assets/img/profilbild.png" alt="">
+
 </div>
+
+<app-menu-bar-mobile  *ngIf="isMenuOpen && screenWidth < 720" [isMenuOpen]="isMenuOpen"></app-menu-bar-mobile>
 
 </div>
 
 
 <div class="headline">
-  
-<img class="logo" src="assets/img/{{ logoImg }}" alt="" (mouseenter)="onHover(true)" (mouseleave)="onHover(false)">     
+<div class="logo-Content">
+<img class="logo" src="assets/img/{{ logoImg }}" alt="" (mouseenter)="onHoverLogo(true)" (mouseleave)="onHoverLogo(false)">
+<span>P.Tesch</span>
+<span class="developer" [ngClass]="{'none': isEnglish}">DEVELOPER</span>
+<span class="developer" [ngClass]="{'none': !isEnglish}">ENTWICKLER</span>
+</div>  
+
 <h1 class="fontAnt"> Philip Tesch </h1>
 <h2 [ngClass]="{'none': isEnglish}" class="fontJosefin">FRONTEND DEVELOPER </h2>
 <h2 [ngClass]="{'none': !isEnglish}"class="fontJosefin">FRONT-END-ENTWICKLER </h2>
@@ -26,9 +38,20 @@
 </div>
 
 <div class="social-media-content">
+
+
+    <a  href="mailto:philip.tesch.developer@gmail.com" target="_blank">
     <img  src="assets/img/{{ iconEmail  }}" alt="" (mouseenter)="onHoverEmail(true)" (mouseleave)="onHoverEmail(false)">
+    </a>   
+
+    <a href="https://github.com/" target="_blank">
     <img  src="assets/img/{{ iconGitHub }}" alt="" (mouseenter)="onHoverGitHub(true)" (mouseleave)="onHoverGitHub(false)"> 
+    </a>   
+
+    <a href="https://www.linkedin.com/in/philip-tesch-b3b0871aa/" target="_blank">   
     <img  src="assets/img/{{ iconLinkedin }}" alt="" (mouseenter)="onHoverLinkedin(true)" (mouseleave)="onHoverLinkedin(false)">
+    </a>   
+
 
 </div>
 

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-
+import { LanguageService} from '../../../services/language.service';
 @Component({
   selector: 'app-menu-bar-mobile',
   standalone: true,
@@ -11,4 +11,25 @@ import { Component, Input } from '@angular/core';
 export class MenuBarMobileComponent {
   
   @Input() isMenuOpen: boolean = false;
+  isEnglish:boolean =false;
+  clicked: string = ''; 
+
+    constructor(private languageService: LanguageService) {}
+    
+    
+      ngOnInit() {
+        this.languageService.isEnglish$.subscribe((status) => {
+          this.isEnglish = status; 
+        });
+      }
+
+
+      translateInEnglish() {
+        this.languageService.toggleLanguage();
+      }
+
+      focusColor(link: string): void {
+        this.clicked = link;
+      }
+  
 }

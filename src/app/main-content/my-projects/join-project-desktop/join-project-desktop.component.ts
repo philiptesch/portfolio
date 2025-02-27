@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, AfterViewInit } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { CommonModule } from '@angular/common';
 
@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './join-project-desktop.component.html',
   styleUrl: './join-project-desktop.component.scss'
 })
-export class JoinProjectDesktopComponent {
+export class JoinProjectDesktopComponent implements AfterViewInit  {
 
    @Input() projects: any;
    @Input() projectsEnglish: any;
@@ -18,6 +18,17 @@ export class JoinProjectDesktopComponent {
 
 
    constructor(private languageService: LanguageService) {}
+
+
+   ngAfterViewInit(): void { 
+    let introElement = document.getElementById('intro');
+    if (introElement) {
+      introElement.classList.add('animate');
+    }
+  }
+
+
+
    
      ngOnInit() {
    

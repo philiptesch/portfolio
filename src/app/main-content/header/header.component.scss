@@ -30,8 +30,11 @@ header {
 
     @media (max-height: 700px) {
         width: 125%;
+        margin-bottom: 0px;
     }
 
+
+   
     .profil-img-content {
         display: flex;
         align-items: flex-start;
@@ -43,7 +46,7 @@ header {
         background-position: center;
         background-position: center;
         border-radius: 19% 62% 100% 90%;
-        min-width: 750px;
+        min-width: 700px;
         height: 800px;
         transition: background-image 0.5s ease-in-out, opacity 0.8s ease-in-out;
         opacity: 1;
@@ -57,13 +60,13 @@ header {
 
 
         @media (max-width: 1450px) {
-            min-width: 600px;
-            height: 740px;
+            min-width: 570px;
+            height: 680px;
 
         }
 
         @media (max-width: 1150px) {
-            min-width: 518px;
+            min-width: 490px;
             height: 610px;
         }
 
@@ -74,7 +77,7 @@ header {
         }
 
         @media (max-width: 850px) {
-            min-width: 320px;
+            min-width: 300px;
             height: 380px;
         }
 
@@ -98,24 +101,24 @@ header {
       
 
         .profile-picture-img {
-            width: 620px;
+            width: 560px;
             height: 770px;
             z-index: 1;
             border-radius: 40%;
             position: absolute;
-            top: 30px;
-            left: 60px;
+            top: 2px;
+            left: 50px;
 
 
 
       
 
             @media (max-width: 1450px) {
-                width: 460px;
-                height: 640px;
+                width: 440px;
+                height: 610px;
                 border-radius: 35%;
-                top: 50px;
-                left: 60px;
+                top: 32px;
+                left: 50px;
             }
 
 
@@ -124,7 +127,7 @@ header {
                 height: 570px;
                 border-radius: 35%;
                 top: 8px;
-                left: 40px;
+                left: 31px;
             }
             
             
@@ -137,19 +140,19 @@ header {
 
             @media (max-width: 850px) {
                 width: 220px;
-                height: 350px;
-                top: 22px;
-                left: 52px;
+                height: 327px;
+                top: 23px;
+                left: 30px;
             }
 
             @media (max-width: 720px) {
-            width: 279px;
-            height: 411px;
-            z-index: 1;
-            border-radius: 34%;
-            margin-right: 30px;
-            left: 48px;
-            top: 0px;
+                width: 279px;
+                height: 370px;
+                z-index: 1;
+                border-radius: 34%;
+                margin-right: 30px;
+                left: 48px;
+                top: 40px;
 
             }
             @media (max-width: 400px) {
@@ -281,32 +284,51 @@ header {
 
 .mobile-header {
     display: none;
+
     @media (max-width: 720px) {
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 80%;
         padding: 80px 0px 31px 0px;
+    }
+
+    .logo-Content-mobile {
+        display: none;
+
+        @media (max-width: 720px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            gap: 5px;
+            font-size: 14px;
         }
+
+        .developer {
+            color: #89bcd9 !important;
+        }
+    }
 
     .logo {
         display: none;
 
         @media (max-width: 720px) {
             display: block;
-            width: 58px;
-            height: 72px;
+            width: 60px;
+            height: 50px;
+        }
     }
-    }
+
     .menu-img {
         display: none;
 
         @media (max-width: 720px) {
-        display: block;
-        margin-bottom: 30px;
-        width: 30px;
-        height: 32px;
-        cursor: pointer;
+            display: block;
+            margin-bottom: 30px;
+            width: 30px;
+            height: 32px;
+            cursor: pointer;
         }
     }
 }
@@ -339,10 +361,43 @@ header {
 }
 
 
+    .logo-Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 5px;
+    font-size: 18px;
+
+
+    @media (max-width: 850px) {
+        font-size: 14px;
+     }
+
+
+     @media (max-width: 720px) {
+        display: none;
+     }
+
+    .developer {
+        color: #89bcd9 !important;
+    }
+
+    }
+
+
+
+
 .hidden {
-    visibility: hidden;
+   visibility: hidden!important;
   }
 
   .none {
-    display: none;
+    display: none !important;
   }
+
+
+  .focus {
+    color: white;
+
+}

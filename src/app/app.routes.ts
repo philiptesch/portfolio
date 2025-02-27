@@ -6,7 +6,6 @@ import { HeaderComponent } from './main-content/header/header.component';
 
 export const routes: Routes = [
     { path: '', component: MainContentComponent },
-    { path: 'main-content/header',  component: HeaderComponent },
     { path: 'terms/imprint', component: ImprintComponent },
     { path: 'terms/privacy-policy', component: PrivacyPolicyComponent } 
 ];

@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 export class MenuBarComponent implements OnInit {
   isMenuBarFixed: boolean = false;
   isEnglish: boolean = false; 
+  clicked: string = ''; 
 
   constructor(private languageService: LanguageService) {}
 
@@ -34,7 +35,16 @@ export class MenuBarComponent implements OnInit {
     }
   }
 
+
+ 
+
   translateInEnglish() {
     this.languageService.toggleLanguage();
   }
+
+
+  focusColor(link: string): void {
+    this.clicked = link;
+  }
 }
+

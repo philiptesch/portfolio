@@ -60,17 +60,34 @@ main {
 }
 
 
+.logo-Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 5px;
+    font-size: 16px;
+    font-weight: bolder;
+    
 
 
+    .logo {
 
-.logo {
 
-
-    img {
-        width: 60px;
-        height: 80px;
+        img {
+            width: 60px;
+            height: 80px;
+        }
     }
-}
+
+
+    .developer {
+        color: #262E34 !important;
+    }
+
+    }
+
+
 
 
 
