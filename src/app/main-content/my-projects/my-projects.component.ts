@@ -46,7 +46,7 @@ export class MyProjectsComponent {
   projectsEnglish = [
     {
       name: 'Join Project',
-      technologies: 'HTML, CSS, JavaScript',
+      technologies: 'HTML, CSS, JavaScript, Github, Firebase',
       duration: '2 months',
       image: 'assets/img/join_project (1).png',
       description: 'Task manager inspired by the Kanban system. Create and organize tasks with drag-and-drop functionality, assign users and categories.',
@@ -56,7 +56,7 @@ export class MyProjectsComponent {
     },
     {
       name: 'El Pollo Loco',
-      technologies: 'Angular, TypeScript, Firebase',
+      technologies: 'CSS, JavaScript, HTML',
       duration: '5 weeks',
       image: 'assets/img/game_project.png',
       description: 'A jump-and-run game based on an object-oriented approach. Help Pepe collect coins and chili bottles to fight against wild chickens.',

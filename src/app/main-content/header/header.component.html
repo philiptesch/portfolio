@@ -8,7 +8,11 @@
         <span class="developer" [ngClass]="{'none': isEnglish}">DEVELOPER</span>
         <span class="developer" [ngClass]="{'none': !isEnglish}">ENTWICKLER</span>
         </div>
-        <img class="menu-img" src="assets/img/Property 1=default.png" alt="" (click)="openMenuBar()"> 
+
+
+        <div>
+        <img id="menu-img" class="menu-img" src="assets/img/{{ menuBarIcon }}" alt="" (click)="openMenuBar()"> 
+        </div>
     </div>
 
 <div class="imgSection">
@@ -33,7 +37,12 @@
 <h1 class="fontAnt"> Philip Tesch </h1>
 <h2 [ngClass]="{'none': isEnglish}" class="fontJosefin">FRONTEND DEVELOPER </h2>
 <h2 [ngClass]="{'none': !isEnglish}"class="fontJosefin">FRONT-END-ENTWICKLER </h2>
-<img class="arrow-down" src="assets/img/{{arrow }}" alt="" (click)="onHoverArrow(true); scrollToWhyMe()">
+
+
+
+<a href="#why-me">
+<img class="arrow-down" src="assets/img/{{arrow }}" alt="" (click)="onHoverArrow(true)">
+</a>
 
 </div>
 

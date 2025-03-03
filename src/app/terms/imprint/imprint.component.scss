@@ -2,44 +2,66 @@ section {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 100%;
-    padding: 120px 60px;
+    width: 100%;   
+    padding: 190px 0px 0px 40px;
     color: white;
-    line-height: 1.6;  
-    text-align: justify; 
+    line-height: 2.5;  
+    text-align: center; 
+    min-height: 82vh;
+    align-items: center;
+    text-align: center;
 
 
     @media (max-width: 1600px) {
-        padding: 100px 50px;  
         font-size: 18px; 
-        width: 80%;
 
         }
 
    
     @media (max-width: 1200px) {
-        padding: 80px 50px;
         font-size: 16px; 
 
     }
 
     @media (max-width: 870px) {
-        padding: 60px 50px;  
         font-size: 14px; 
         line-height: 1.4; 
     }
 
     
-    @media (max-width: 650px) {
+    @media (max-width: 720px) {
+        padding: 300px 0px 0px 0px;
     }
 
-
-    @media (max-width: 470px) {
-  
+    
+    @media (min-height: 2500px) {
+        min-height: 82vh;
     }
 
-    @media (max-width: 390px) {
-   
-        padding: 60px 25px;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+p {
+    font-size: 24px;
+
+    @media (max-width: 870px) {
+        font-size: 20px;
     }
 }
+
+a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+.none {
+    display: none !important;
+  }

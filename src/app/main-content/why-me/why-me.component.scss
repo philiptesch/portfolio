@@ -1,17 +1,11 @@
 section {
-    width: 100%;
     display: flex;
     justify-content: center;
-    padding: 180px 0px 0px 40px;
+    padding: 140px 0px 0px 40px;
     overflow-x: hidden;
 
-
-    @media (max-height: 720px) {
-        margin-top: 100px;
-    }
-
     @media (max-width: 720px) {
-        padding: 80px 0px 0px 0px;
+        padding: 50px 0px 0px 0px;
     }
 
 
@@ -19,7 +13,7 @@ section {
         color: #89BCD9;
         font-weight: 400;
         font-size: 60px;
-        margin-block-start: 0;
+        margin-block-start: 75px;
         margin-block-end: 0;
 
         @media (max-width: 720px) {
@@ -27,13 +21,14 @@ section {
             font-weight: 400;
             font-size: 32px;
             margin-block-end: 0;
+            margin-block-start:05px;
         }
     }
 }
 
 main {
     display: flex;
-    padding: 60px 22px 100px 10px;
+    padding: 60px 22px 0px 10px;
     justify-content: center;
     align-items: center;
 
@@ -46,7 +41,6 @@ main {
     display: flex;
     flex-direction: column;
     margin-left: 100px;
-    flex: 1;
 
     @media (max-width: 850px) {
         margin-left: 20px;
@@ -424,7 +418,7 @@ main {
     animation-delay: 900ms; 
 
     @media (max-width: 720px) {
-        padding: 30px 140px 9px 140px;
+        padding: 0px 140px 9px 140px;
         margin-left: 0px;
         line-height: 30px;
         text-align: center;

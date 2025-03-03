@@ -21,6 +21,7 @@ export class ContactMeComponent {
 
 hoverdArrow: boolean = false;
 checked: boolean = false;
+privacyTouched: boolean = false; 
 arrow = 'arrow_up.png';
 isNotChecked= 'Property 1=error.png';
 isChecked ='check_icon.png';
@@ -38,6 +39,7 @@ nameInvalid: boolean = false;
 emailInvalid: boolean = false;
 messageInvalid: boolean = false;
 isEnglish: boolean = false; 
+successMessage: boolean = false
 
   post = {
     endPoint: 'https://philip-tesch.de/sendMail.php',
@@ -67,13 +69,12 @@ isEnglish: boolean = false;
       this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
           next: (response) => {
-            console.log("Response received:", response);
             ngForm.resetForm();
           },
           error: (error) => {
-            console.error("Error in request:", error);
           },
-          complete: () => console.info('Post request completed'),
+          complete: () => {
+          },
         });
     }
   }
@@ -98,19 +99,47 @@ checkInputFieldMessage() {
 
 
 checkPrivacy() {
-  this.isChecked ='is_checked.png';
+  this.privacyTouched = true;
   this.checked =   !this.checked;
-  if (this.checked && !this.checkInputFieldMessage() && !this.checkInputFieldEmail() && !this.checkInputFieldMessage() ) {
-    this.checked = false;
+  if (this.checked) {
+    this.isChecked ='is_checked.png';
     this.isFormValid = true;
 }else {
-  this.isChecked ='Property 1=error.png'; 
+  this.isChecked ='check_icon.png';
   this.isFormValid = false;
     
 }
 
+
 }
 
+sendMessage(event: Event) {
+  event.preventDefault(); 
+
+  if (!(this.checked && this.isFormValid && !this.checkInputFieldName() && !this.checkInputFieldEmail() && !this.checkInputFieldMessage())) {
+    if (!this.checked) {  
+      this.isChecked = 'Property 1=error.png';
+      this.privacyTouched = true;
+    }
+    return; 
+  }
+
+
+  this.contactData = {
+    name: "",
+    email: "",
+    message: ""
+  };
+
+  this.successMessage = true;
+  this.isChecked = 'check_icon.png';
+
+  setTimeout(() => {
+    this.successMessage = false;
+    this.checked = false;
+    this.privacyTouched = false;
+  }, 5000);
+}
 
 
 onHoverArrow(hovered: boolean) {

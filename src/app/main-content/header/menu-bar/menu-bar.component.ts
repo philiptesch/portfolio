@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, Input } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { CommonModule } from '@angular/common';
 
@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./menu-bar.component.scss']
 })
 export class MenuBarComponent implements OnInit {
+  @Input() isVisible: boolean = false;
   isMenuBarFixed: boolean = false;
   isEnglish: boolean = false; 
   clicked: string = ''; 
@@ -17,9 +18,9 @@ export class MenuBarComponent implements OnInit {
   constructor(private languageService: LanguageService) {}
 
   ngOnInit() {
-
     this.languageService.isEnglish$.subscribe((status) => {
       this.isEnglish = status;
+      
     });
   }
 

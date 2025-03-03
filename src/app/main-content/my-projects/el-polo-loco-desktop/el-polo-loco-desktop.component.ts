@@ -14,7 +14,7 @@ export class ElPoloLocoDesktopComponent implements AfterViewInit  {
 
 
   ngAfterViewInit(): void { 
-    let introElement = document.getElementById('intro');
+    let introElement = document.getElementById('introTwo');
     if (introElement) {
       introElement.classList.add('animate');
     }

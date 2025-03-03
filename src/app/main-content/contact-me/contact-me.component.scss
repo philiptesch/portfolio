@@ -4,13 +4,11 @@ $fontAnt: 'Anta';
 
 
 section {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
-    margin-top: 100px;
     overflow-x: hidden;
     
 
@@ -30,7 +28,7 @@ section {
     font-weight: 400;
     font-size: 54px;
     margin-block-end: 50px;
-    margin-block-start: 50px;
+    margin-block-start: 120px;
     opacity: 0;
     animation: fadeFormAbove 900ms ease-out forwards;
     animation-delay: 900ms; 
@@ -250,7 +248,7 @@ img {
 
 
 .invalid-input-mail {
-    border-color: red; 
+    border-color: red !important; 
   }
 
 
@@ -259,7 +257,25 @@ img {
     font-size: 14px;
     margin-top: 5px;
     margin-left: 32px;
+
+
+         
+    @media (max-width:720px) {
+        max-width: 250px;
+     }
   }
+
+.error-textMessage {
+    color: red; 
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 32px;
+
+    @media (max-width:720px) {
+        margin-left: 0px;
+     }
+
+}
 
   .email-input-Field {
     border: 1px solid #89BCD9;
@@ -410,16 +426,34 @@ input.email-input-Field:-webkit-autofill {
 
      }
 
-    button {
+     .sendBtn {
         height: 50px;
         width: 105px;
         border: 1px solid #F8F5EC;
         border-radius: 30px;
         color: #89BCD9;
         font-family: $fontJosefin;
+
+        &:hover {
+            font-weight: bolder;
+          }
+
+          &:not(.disabled):hover {
+            background: rgba(248, 245, 236, 0.12);
+          }
+
+
+        &.disabled {
+         opacity: 0.6;
+            cursor: not-allowed;
+
+    &:hover {
+      color: red;
+      font-weight: bolder;
+    }
     }
 
-
+}
 
 
 }
@@ -470,3 +504,27 @@ input.email-input-Field:-webkit-autofill {
     }
   
   }
+
+
+  @keyframes fadeFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(-650px);   }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  
+  }
+
+
+  .success-message {
+    background-color: #89BCD9;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+    opacity: 0;
+    animation: fadeFromBottom 1900ms ease-out forwards;  }

@@ -48,8 +48,9 @@
                  type="text"  [placeholder]="!isEnglish ? 'Your Name' : 'Ihr Name'" required  [ngClass]="{ 'invalid-input': nameInvalid }">
 
 
-                 <span [ngClass]="{'none': isEnglish}" *ngIf="nameInvalid" class="error-text"> *Please enter full name!</span>
-                 <span  [ngClass]="{'none': !isEnglish}"*ngIf="nameInvalid" class="error-text"> *Bitte vollständigen Namen eingeben!</span>
+                 <span [ngClass]="{'none': isEnglish}" *ngIf="nameInvalid" class="error-text">   *Please enter your first and last name!
+                </span>
+                 <span  [ngClass]="{'none': !isEnglish}"*ngIf="nameInvalid" class="error-text">  *Bitte geben Sie Ihren Vor- und Nachnamen ein!</span>
             </div>
     
             <div class="your-email">
@@ -66,8 +67,8 @@
                        [placeholder]="!isEnglish ? 'Your E-Mail' : 'Ihre E-Mail'"
                        [ngClass]="{ 'invalid-input': emailInvalid }" 
                        required>
-                <span *ngIf="emailInvalid"  [ngClass]="{'none': isEnglish}"class="error-text"> *Please enter your email address!!!</span>
-                <span *ngIf="emailInvalid"  [ngClass]="{'none': !isEnglish}"class="error-text">*Bitte E-Mail Adresse eintragen!!!</span>
+                <span *ngIf="emailInvalid"  [ngClass]="{'none': isEnglish}"class="error-text">  *Please enter a valid email address!</span>
+                <span *ngIf="emailInvalid"  [ngClass]="{'none': !isEnglish}"class="error-text"> *Bitte geben Sie eine gültige E-Mail Adresse ein!</span>
             </div>
         </div>
     
@@ -81,8 +82,8 @@
 
                 </textarea>
             </div>
-            <span [ngClass]="{'none': isEnglish}" *ngIf="messageInvalid" class="error-text"> *Please enter a message!!!</span>
-            <span [ngClass]="{'none': !isEnglish}" *ngIf="messageInvalid" class="error-text"> *Bitte eine Nachricht eingeben!!!</span>
+            <span [ngClass]="{'none': isEnglish}" *ngIf="messageInvalid" class="error-textMessage"> *Please enter a message!!!</span>
+            <span [ngClass]="{'none': !isEnglish}" *ngIf="messageInvalid" class="error-textMessage"> *Bitte eine Nachricht eingeben!!!</span>
         </div>
 
         <div class="checked"> 
@@ -101,16 +102,27 @@
 
 
         </div>
-        <span [ngClass]="{'none': isEnglish}" *ngIf="checked" class="error-text"> *Please read and accept the privacy policy!!!</span>
+        <span [ngClass]="{'none': isEnglish}" *ngIf="privacyTouched && !checked" class="error-text"> *Please read and accept the privacy policy!!!</span>
 
 
-        <span [ngClass]="{'none': !isEnglish}" *ngIf="checked" class="error-text"> *Bitte lesen und akzeptieren Sie die Datenschutzbestimmungen!!!</span>
+        <span [ngClass]="{'none': !isEnglish}" *ngIf="privacyTouched && !checked" class="error-text"> *Bitte lesen und akzeptieren Sie die Datenschutzbestimmungen!!!</span>
 
         <div class="button-content">
-            <button [ngClass]="{'none': isEnglish}" [disabled]="!isFormValid">Send</button>
-            <button  [ngClass]="{'none': !isEnglish}" [disabled]="!isFormValid">Senden</button>
-        </div>
+            <input
+              class="sendBtn"
+              type="submit"
+              [value]="!isEnglish ? 'send' : 'Senden'"
+              [ngClass]="{'disabled': !(checked && isFormValid && !checkInputFieldMessage() && !checkInputFieldEmail() && !checkInputFieldName())}"
+              (click)="sendMessage($event)">
+          </div>
     </form>
+
+    <div *ngIf="successMessage" class="success-message">
+        <span    [ngClass]="{'none': isEnglish}" class="successMessageText"> Message was sent successfully!</span>
+        <span   [ngClass]="{'none': !isEnglish}" class="successMessageText">Nachricht wurde erfolgreich gesendet!</span>
+    </div>
+
+
     </div>
 
     <img class="arrowIconMobile" src="assets/img/{{ arrow }}" (click)="onHoverArrow(true); scrollToMainContent()">

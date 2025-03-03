@@ -4,23 +4,31 @@
     align-items: center;
     }
 
+
+
+
+
 .project-presentation {
-    width: 100%;
+    width: 100vw;
     height: 548px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     border-top-right-radius: 30px;
     background-color: #2d383F;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    bottom: 0;
-    right: 0;
     display: flex;
     justify-content: center;
+    padding: 10px 0px 0px 250px;
 
 
-    @media (max-width:1100px) {
+    @media (max-width:1450px) {
+        justify-content: flex-start;
+        padding: 10px 0px 0px 150px;
+
+
+    }
+
+
+    @media (max-width:1350px) {
         justify-content: flex-start;
         padding: 10px 0px 0px 40px;
 
@@ -31,7 +39,6 @@
         padding:  10px 0px 0px 0px;
         height: 925px;
         flex-direction: column-reverse;
-        width: 100%;
         inset: 40px 0 0;
         justify-content: center;
         border-bottom-left-radius: 30px;
@@ -51,7 +58,6 @@
     .join_presentation {
             display: flex;
             flex-direction: column;
-            padding: 10px 0px 0px 190px;
 
 
 
@@ -61,14 +67,14 @@
 
 
             @media (max-width:900px) {
-                padding: 10px 0px 0px 0px;
+                padding: 10px 0px 0px 40px;
             }
          
     
 
         h3 {
             color: #89BCD9;
-            font-weight: 400;
+            font-weight: bolder;
             font-size:24px;
             margin-block-start: 20px;
 
@@ -138,11 +144,10 @@
          
             @media (max-width:1200px) {
                 max-width: 320px;
-                font-size: 22px;
             }
 
             @media (max-width:720px) {
-                font-size: 18px;
+                font-size: 22px;
             }
 
             @media (max-width:450px) {
@@ -158,7 +163,7 @@
     span {
         color: #F8F5EC;
         font-weight: 400;
-        font-size:16px;
+        font-size:18px;
         line-height: 20px;
         max-width: 600px;
         opacity: 0;
@@ -196,7 +201,7 @@
 
 h3 {
     color: #89BCD9;
-    font-weight: 400;
+    font-weight: bolder;
     font-size:24px;
     margin-block-start: 20px;
 }
@@ -251,11 +256,10 @@ h3 {
 
             @media (max-width:1200px) {
                 max-width: 320px;
-                font-size: 22px;
             }
 
             @media (max-width:720px) {
-                font-size: 18px;
+                font-size: 22px;
             }
         }
     }
@@ -264,7 +268,7 @@ h3 {
     span {
         color: #F8F5EC;
         font-weight: 400;
-        font-size:16px;
+        font-size:18px;
         line-height: 20px;
         max-width: 600px;
         opacity: 0;
@@ -344,11 +348,10 @@ h3 {
     
             @media (max-width:1200px) {
                 max-width: 320px;
-                font-size: 22px;
             }
 
             @media (max-width:720px) {
-                font-size: 18px;
+                font-size: 22px;
             }
             
         }
@@ -358,7 +361,7 @@ h3 {
     span {
         color: #F8F5EC;
         font-weight: 400;
-        font-size:16px;
+        font-size:18px;
         line-height: 20px;
         max-width: 600px;
         opacity: 0;
@@ -414,7 +417,7 @@ h3 {
         margin-block-end: 0px;
         opacity: 0;
         animation: fadeInUp 0.9s ease-in-out forwards;
-        animation-delay: 0.2s;  /* Überschrift erscheint zuerst */
+        animation-delay: 0.2s;  
     }
 
     .technologi-images {

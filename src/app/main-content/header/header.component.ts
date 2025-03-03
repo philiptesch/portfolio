@@ -27,6 +27,7 @@ export class HeaderComponent {
   hoverdArrow: boolean = false;
   screenWidth: number = window.innerWidth; 
   isEnglish:boolean =false;
+  menuBarIcon:string = 'Property 1=default.png'
   
     constructor(private languageService: LanguageService) {}
   
@@ -75,7 +76,7 @@ export class HeaderComponent {
   onHoverEmail(hovered: boolean) {
     this.hoveredSocialIconEmail = hovered
     if (this.hoveredSocialIconEmail) {
-      this.iconEmail = 'Property 1=hover blue.png'
+      this.iconEmail = 'hover_email_icon.png'
       
     }else {
       this.iconEmail = 'Property 1=default (3).png'
@@ -118,6 +119,7 @@ export class HeaderComponent {
   
 
 
+
   onHoverArrow(hovered: boolean) {
     this.hoverdArrow = hovered
     if (this.hoverdArrow) {
@@ -129,6 +131,12 @@ export class HeaderComponent {
 
 openMenuBar() {
   this.isMenuOpen = !this.isMenuOpen;
+
+  if (this.isMenuOpen) {
+    this.menuBarIcon = 'close.png'
+  } else {
+      this.menuBarIcon = 'Property 1=default.png'
+  }
 
 }
 

@@ -6,20 +6,19 @@
     <div class="my-Projects">
         
         <div class="project-bar">
-        <div class="project indent-project-titles" (click)="openProjectJoin()" [ngClass]="{'showProject': joinIsOpen}">
+        <div class="project indent-project-titles">
+        <button class="btn_Join" (click)="openProjectJoin()" [ngClass]="{'showProject': joinIsOpen}">
+                 <h2 [ngClass]="{'none': isEnglish}"> Join Project </h2>
+                 <h2 [ngClass]="{'none': !isEnglish}"> Join Projekt </h2>
+        </button>    
 
 
-            <h2 [ngClass]="{'none': isEnglish}"> Join Project </h2>
-            <h2 [ngClass]="{'none': !isEnglish}"> Join Projekt </h2>
+        <button class="btn_EllPoloLoco" (click)="openProjectElPoloLoco()" [ngClass]="{'showProject': elPoloIsOpen}"> <h2> El Polo Loco </h2> </button>    
+        </div>
             <app-join-project-desktop [ngClass]="{'displayOpen': joinIsOpen}" [projects]="projects" [projectsEnglish]="projectsEnglish"></app-join-project-desktop>
-        </div>
-        
-
-        <div class="project" (click)="openProjectElPoloLoco()" [ngClass]="{'showProject': elPoloIsOpen}">
-
-            <h2> El Polo Loco </h2>
             <app-el-polo-loco-desktop [ngClass]="{'displayOpen': elPoloIsOpen}" [projects]="projects" [projectsEnglish]="projectsEnglish"></app-el-polo-loco-desktop>
-        </div>
+
+    
         </div>
     </div>
 

@@ -3,6 +3,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 $fontJosefin: 'Josefin Sans';
@@ -11,11 +12,9 @@ $fontAnt: 'Anta';
 body {
     font-family: $fontJosefin;
     margin: 0;
-    height: 100vh;
     background-color: #262E34;
     overflow-y: auto;
     scrollbar-width: none;
-    max-width: 1440px;
     overflow-x: hidden;
   }
   

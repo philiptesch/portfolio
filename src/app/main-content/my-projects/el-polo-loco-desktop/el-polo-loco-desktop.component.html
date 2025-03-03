@@ -66,13 +66,13 @@
             </div>
             </div>
 
-            <div class="mobile-view">
+            <div class="mobile-view" id="introTwo">
                 <h3> {{ projects[1].name }} </h3>
-                <span id="intro" [ngClass]="{'none': !isEnglish}" class="intro"> Technologien: {{ projectsEnglish[1].technologies }} </span>
-                <span id="intro"  [ngClass]="{'none': !isEnglish}" class="intro"> duration: {{ projectsEnglish[1].duration }} </span>
+                <span  [ngClass]="{'none': !isEnglish}" class="intro"> Technologien: {{ projectsEnglish[1].technologies }} </span>
+                <span   [ngClass]="{'none': !isEnglish}" class="intro"> duration: {{ projectsEnglish[1].duration }} </span>
     
-                <span  id="intro" [ngClass]="{'none': isEnglish}" class="intro"> Technologies: {{ projectsEnglish[1].technologies }} </span>
-                <span  id="intro"  [ngClass]="{'none': isEnglish}" class="intro"> Dauer: {{ projects[1].duration }} </span>
+                <span  [ngClass]="{'none': isEnglish}" class="intro"> Technologies: {{ projectsEnglish[1].technologies }} </span>
+                <span    [ngClass]="{'none': isEnglish}" class="intro"> Dauer: {{ projects[1].duration }} </span>
                  </div>
 
             <div class="project_img-content">

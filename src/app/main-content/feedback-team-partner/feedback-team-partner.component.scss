@@ -5,13 +5,9 @@ section {
   align-items: center;
   justify-content: center;
   height: 100%;
-  margin-top: 550px;
   overflow-x: hidden;
 
-  @media (max-width: 720px) {
-    margin-top:1000px;
-    height: auto;
-}
+
 
 }
 
@@ -20,7 +16,7 @@ section h1 {
   font-weight: 400;
   font-size: 32px;
   margin-block-end: 50px;
-  margin-block-start: 50px;
+  margin-block-start: 90px;
   opacity: 0;
   animation: fadeFormAbove 900ms ease-out forwards;
   animation-delay: 900ms; 
