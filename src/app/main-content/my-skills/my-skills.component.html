@@ -1,19 +1,23 @@
 <section id="skills">
-
+    <div class="headline">
     <h1 class="fontAnt" [ngClass]="{'none': isEnglish}"> My Skills</h1>
     <h1 class="fontAnt" [ngClass]="{'none': !isEnglish}"> Meine Fähigkeiten</h1>
-
+    </div>
 
     <div class="my-ability-introduction-mobile">
   
         <span class="introduction-mobile" [ngClass]="{'none': isEnglish}">
-            I have worked on various projects using a variety of frontend technologies and concepts.</span>
+            I have worked on various projects using a variety of frontend technologies and concepts. I am always open to learning new technologies and methods in order to continually improve my skills
+            and staying one step ahead in the ever-changing world of web development.</span>
 
 
             <span class="introduction-mobile" [ngClass]="{'none': !isEnglish}">
-                Ich habe an verschiedenen Projekten gearbeitet und dabei eine Vielzahl von Frontend-Technologien und -Konzepten eingesetzt. 
+                Ich habe an verschiedenen Projekten gearbeitet und dabei eine Vielzahl von Frontend-Technologien und -Konzepten eingesetzt. Dabei bin ich stets offen, neue Technologien und Methoden zu erlernen, um meine Fähigkeiten kontinuierlich zu verbessern
+                und in der sich ständig verändernden Welt der Webentwicklung immer einen Schritt voraus zu bleiben. 
             </span>
         </div>    
+
+
 
     <div class="my-skills-content">
     <div class="skills">
@@ -29,7 +33,7 @@
         <img  class="skillsIcon" src="assets/img/Property 1=Scrum.png" alt="">
 
 
-          <div [ngClass]="{'hidden': !isClicked}" class="learning-icon-crate">
+          <div [ngClass]="{'hidden': !isClicked}"  class="learning-icon-crate">
 
             <div class="backend-content">
                 <span [ngClass]="{'none': isEnglish}"> I would like to continue my education </span>

@@ -3,9 +3,12 @@ section {
     justify-content: center;
     padding: 140px 0px 0px 40px;
     overflow-x: hidden;
+    max-width: 1920px;
+    width: 100%;
+    flex-direction: column;
 
     @media (max-width: 720px) {
-        padding: 50px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
     }
 
 
@@ -26,25 +29,41 @@ section {
     }
 }
 
+.headline {
+    display: flex;
+    justify-content: center;
+}
+
 main {
     display: flex;
-    padding: 60px 22px 0px 10px;
-    justify-content: center;
+    padding: 60px 130px 0px 130px;
+    justify-content: space-between;
     align-items: center;
+
+
+    
+    @media (max-width: 1450px) {
+        justify-content: center;
+        padding: 60px 0px 0px 0px;
+    }
+
 
     @media (max-width: 720px) {
         flex-direction: column;
     }
 }
 
-.about-me-lovation-info {
+.about-me-location-info {
     display: flex;
     flex-direction: column;
-    margin-left: 100px;
 
+
+    
     @media (max-width: 850px) {
-        margin-left: 20px;
+        margin-right: 20px;
     }
+
+
 }
 
 .located-city {
@@ -330,7 +349,6 @@ main {
 }
 
 
-/* Custom keyframes for each specific section */
 @keyframes fadeInLocatedCity {
     from {
         opacity: 0;
@@ -409,13 +427,18 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 360px;
-    margin-left: 50px;
     flex-direction: column;
     opacity: 0;
     transform: translate(100px, -100px);
     animation: fadeInAboutMe 900ms ease-out forwards;
     animation-delay: 900ms; 
+    max-width: 350px;
+
+
+        
+    @media (max-width: 850px) {
+        max-width: 395px;
+    }
 
     @media (max-width: 720px) {
         padding: 0px 140px 9px 140px;
@@ -429,6 +452,13 @@ main {
         padding: 30px 50px 10px 50px;
 
     }
+
+    @media (max-height: 700px) {
+        padding: 0px 50px 10px 50px;
+        margin-bottom: 50px;
+
+    }
+
 
 
     @keyframes fadeInAboutMe {
@@ -455,7 +485,10 @@ main {
     display: flex;
     justify-content: flex-end;
 
-
+        
+    @media (max-width: 950px) {
+        width: 60%;
+    }
     
     @media (max-width: 850px) {
         width: auto;

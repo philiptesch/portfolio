@@ -1,10 +1,11 @@
 section {
     width: 100%;
     display: flex;
-    align-items: center;
     margin-bottom: 50px;
     flex-direction:column ;
     overflow-x: hidden;
+    max-width: 1920px;
+  
 
 
 
@@ -22,6 +23,12 @@ section {
           margin-block-end: 35px;
           margin-block-start: 50px;
       }
+
+
+      @media (max-height: 700px) {
+        margin-block-start: 0px;
+        
+    }
         }
 
 
@@ -30,15 +37,34 @@ section {
 }
 
 
+.headline {
+  display: flex;
+  justify-content: center;
+}
+
+
 .my-ability-introduction-mobile {
 display: none;
+animation: fadeFromAbove 1.0s ease-out forwards;
+animation-delay: 900ms; 
   @media (max-width: 720px) {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 250px;
+  padding: 0px 140px 9px 140px;
   text-align: center;
   margin-bottom: 30px;
+
+
+
+  @media (max-width: 550px) {
+        padding: 30px 50px 10px 50px;
+    }
+
+    @media (max-height: 700px) {
+    display: none;
+  }
+
   }
 
   @keyframes fadeInAboutMe {
@@ -61,6 +87,7 @@ display: block;
 font-weight: 400;
 font-size: 18px;
 color: #F8F5EC;
+
   }
 }
 
@@ -93,9 +120,12 @@ color: #F8F5EC;
 
 .my-skills-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 60px 130px 0px 130px;
 
-    @media (max-width: 1090px) {
+    @media (max-width: 1450px) {
+      justify-content: center;
+      padding: 60px 0px 0px 0px;
   }
 
   @media (max-width: 850px) {
@@ -108,19 +138,9 @@ color: #F8F5EC;
   flex-wrap: wrap;
   margin-right: 0px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-height: 700px) {
+  padding: 0px 0px 0px 0px;
+}
 
 
     .skills {
@@ -164,19 +184,19 @@ color: #F8F5EC;
 
 .skillsIcon {
   opacity: 0;
-  animation: fadeInSlide 0.8s ease-in-out forwards;
+  animation: fadeInSlide 1s ease-in-out forwards;
 }
 
-.skillsIcon:nth-child(1) { animation-delay: 0.2s; }
-.skillsIcon:nth-child(2) { animation-delay: 0.4s; }
-.skillsIcon:nth-child(3){ animation-delay: 0.6s; }
-.skillsIcon:nth-child(4) { animation-delay: 0.8s; }
-.skillsIcon:nth-child(5) { animation-delay: 1s; }
-.skillsIcon:nth-child(6) { animation-delay: 1.2s; }
-.skillsIcon:nth-child(7) { animation-delay: 1.4s; }
-.skillsIcon:nth-child(8) { animation-delay: 1.6s; }
-.skillsIcon:nth-child(9) { animation-delay: 1.8s; }
-.skillsIcon:nth-child(10) { animation-delay: 2s; }
+.skillsIcon:nth-child(1) { animation-delay: 1.0s; }
+.skillsIcon:nth-child(2) { animation-delay: 1.2s; }
+.skillsIcon:nth-child(3){ animation-delay:  1.4s; }
+.skillsIcon:nth-child(4) { animation-delay: 1.6s; }
+.skillsIcon:nth-child(5) { animation-delay: 1.8s; }
+.skillsIcon:nth-child(6) { animation-delay: 2.0s; }
+.skillsIcon:nth-child(7) { animation-delay: 2.2s; }
+.skillsIcon:nth-child(8) { animation-delay: 2.4s; }
+.skillsIcon:nth-child(9) { animation-delay: 2.6s; }
+.skillsIcon:nth-child(10) { animation-delay: 2.8s; }
 
 @keyframes fadeInSlide {
   from {
@@ -222,7 +242,7 @@ display: none;
       justify-content: center;  
       align-items: center;
       opacity: 0;
-      animation: fadeInAboutMe 900ms ease-out forwards;
+      animation: fadeInAboutMe 1.2s ease-out forwards;
       animation-delay: 900ms; 
       height: 430px;
       width: 430px;
@@ -299,7 +319,7 @@ display: none;
       display: flex;
       max-width: 300px;
       text-align: center;
-      animation: fadeInAboutMe 900ms ease-out forwards;
+      animation: fadeInAboutMe 1s ease-out forwards;
       animation-delay: 900ms; 
 
 
@@ -451,7 +471,7 @@ display: none;
 
 
     .animate-fade-in {
-      animation: fadeInSlide 2.5s ease-in-out forwards;
+      animation: fadeInSlide 2.2s ease-in-out forwards;
       animation-duration: 2.5s;
     }
     
@@ -640,15 +660,21 @@ position: relative;
 
 
 .go-to-messenger {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
+display: none;
 
 
   @media (max-width: 720px) {
-    display: none
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
   
     }
+
+    @media (max-height: 700px) {
+      margin-bottom: 50px;
+      
+  }
   
 
 a {
@@ -692,6 +718,18 @@ a {
 
 }
 }
+
+@keyframes fadeFromAbove {
+  from {
+      opacity: 0;
+      transform: translateY(-100px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
 
 
 .hidden {

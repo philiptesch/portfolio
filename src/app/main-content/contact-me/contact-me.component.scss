@@ -9,13 +9,22 @@ section {
     align-items: center;
     justify-content: center;
     height: 100%;
-    overflow-x: hidden;
-    
+    overflow-x: hidden;   
+    max-width: 1920px;
+    width: 100%;
+    margin-bottom: 90px;
 
   }
 
 
+main {
+    width: 100%;
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+}
 
 
 .headline {  
@@ -27,16 +36,24 @@ section {
     color: #89BCD9;
     font-weight: 400;
     font-size: 54px;
-    margin-block-end: 50px;
+    margin-block-start: 80px;
     margin-block-start: 120px;
-    opacity: 0;
-    animation: fadeFormAbove 900ms ease-out forwards;
-    animation-delay: 900ms; 
+  
   
 
     @media (max-width:720px) {
         font-size: 32px;
+        margin-block-start: 80px;
      }
+
+     @media (max-height: 700px) {
+        margin-block-start: 0px;
+      
+      
+      }
+
+
+     
 }  
 
 img {
@@ -64,13 +81,18 @@ img {
     justify-content: center;
     gap: 45px;
     opacity: 0;
-    animation: fadeFormAbove 1000ms ease-out forwards;
+    animation: fadeFormAbove 2s ease-out forwards;
     animation-delay: 1000ms; 
 
 
     @media (max-width:1150px) {
         flex-direction: column-reverse;
      }
+
+     @media (max-height: 700px) {
+        gap: 20px;
+        
+    }
 
 
     span {
@@ -84,7 +106,7 @@ img {
 
         
         @media (max-width:450px) {
-            font-size: 14px;
+            font-size: 16px;
             max-width: 260px;
 
          }
@@ -138,7 +160,7 @@ img {
          }
 
          @media (max-width:400px) {
-            font-size:14px;
+            font-size:16px;
          }
     
     }
@@ -159,12 +181,18 @@ img {
         margin-right: 20px;
      }
 
+     @media (max-height: 700px) {
+        margin-top: 20px;
+      
+      
+      }
+
 
     .your-contact-info {
        display: flex;
        gap: 50px;
        opacity: 0;
-       animation: fadeFormAbove 1100ms ease-out forwards;
+       animation: fadeFormAbove 2s ease-out forwards;
        animation-delay: 1100ms; 
 
 
@@ -321,7 +349,7 @@ input.email-input-Field:-webkit-autofill {
     flex-direction: column;
     margin-top: 20px;
     opacity: 0;
-    animation: fadeFormAbove 1400ms ease-out forwards;
+    animation: fadeFormAbove 2s  ease-out forwards;
     animation-delay: 900ms; 
 
     @media (max-width:1150px) {
@@ -389,7 +417,7 @@ input.email-input-Field:-webkit-autofill {
     align-items: center;
     margin-top: 30px;
     opacity: 0;
-    animation: fadeFormRightSide 1200ms ease-out forwards;
+    animation: fadeFormRightSide  2s  ease-out forwards;
     animation-delay: 900ms; 
 
     @media (max-width:1150px) {
@@ -418,7 +446,7 @@ input.email-input-Field:-webkit-autofill {
     display: flex;
     justify-content: flex-end;
     opacity: 0;
-    animation: fadeFormRightSide 1200ms ease-out forwards;
+    animation: fadeFormRightSide  2s  ease-out forwards;
     animation-delay: 900ms; 
 
     @media (max-width:1150px) {
@@ -527,4 +555,4 @@ input.email-input-Field:-webkit-autofill {
     border-radius: 5px;
     font-size: 16px;
     opacity: 0;
-    animation: fadeFromBottom 1900ms ease-out forwards;  }
+    animation: fadeFromBottom  2s ease-out forwards;  }

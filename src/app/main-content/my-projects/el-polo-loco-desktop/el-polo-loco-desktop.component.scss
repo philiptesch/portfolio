@@ -4,29 +4,48 @@
     align-items: center;
     }
 
+    .project {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0px 130px 0px 130px;
 
+
+        @media (max-width: 1400px) {
+            padding: 0px 0px 0px 0px;
+        }
+        
+        @media (max-width: 900px) {
+       justify-content: center;
+        }
+
+
+        @media (max-width: 720px) {
+            flex-direction: column-reverse;
+            align-items: center;
+             }
+}
 
     
 .project-presentation {
-    width: 100vw;
+    width: 100%;
+    max-width: 1920px;
     height: 548px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     border-top-right-radius: 30px;
     background-color: #2d383F;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 
 
     @media (max-width:1100px) {
         justify-content: flex-start;
-        padding: 10px 0px 0px 40px;
 
     }
 
 
     @media (max-width:720px) {
-        padding:  10px 0px 0px 0px;
         height: 925px;
         flex-direction: column-reverse;
         inset: 40px 0 0;
@@ -47,7 +66,6 @@
     .ellPoloLoco_presentation {
             display: flex;
             flex-direction: column;
-            padding: 10px 0px 0px 190px;
 
 
 
@@ -92,9 +110,10 @@
     flex-direction: column;
     margin-top: 40px;
 
-    @media (max-width:720px) {
+
+    @media (max-width:1200px) {
         margin-top: 10px;
-    }
+         }
 
     .about-the-project-headline {
         display: flex;
@@ -102,7 +121,12 @@
         align-items: center;
         margin-bottom: 25px;
         opacity: 0;
-        animation: fadeInLeftHeadline  ease-in-out forwards 1s;
+        animation: fadeInLeftHeadline  ease-in-out forwards 2s;
+
+
+        @media (max-width:1200px) {
+            margin-bottom: 10px;
+        }
 
         @media (max-width:720px) {
             margin-bottom: 5px;
@@ -164,7 +188,7 @@
         line-height: 20px;
         max-width: 600px;
         opacity: 0;
-        animation: fadeInLeft  ease-in-out forwards 1.5s;
+        animation: fadeInLeft  ease-in-out forwards 2.0s;
         padding-left: 30px;
 
 
@@ -227,7 +251,11 @@ h3 {
         align-items: center;
         margin-bottom: 25px;
         opacity: 0;
-        animation: fadeInLeftHeadline  ease-in-out forwards 1s;
+        animation: fadeInLeftHeadline  ease-in-out forwards 2.0s;
+
+        @media (max-width:1200px) {
+            margin-bottom: 10px;
+        }
         
         @media (max-width:720px) {
             margin-bottom: 5px;
@@ -274,7 +302,7 @@ h3 {
         line-height: 20px;
         max-width: 600px;
         opacity: 0;
-        animation: fadeInLeft  ease-in-out forwards 1.5s;
+        animation: fadeInLeft  ease-in-out forwards 2.0s;
         padding-left: 30px;
 
     
@@ -301,10 +329,7 @@ h3 {
   }
 
 
-  .animate {
-    opacity: 0;
-    animation: fadeInLeft  ease-in-out forwards 1.5s;
-  }
+
 
 
   .my-group-work-experience {
@@ -318,7 +343,12 @@ h3 {
         align-items: center;
         margin-bottom: 25px;
         opacity: 0;
-        animation: fadeInLeftHeadline  ease-in-out forwards 1s;
+        animation: fadeInLeftHeadline  ease-in-out forwards 2.0s;
+
+        @media (max-width:1200px) {
+            margin-bottom: 10px;
+        }
+
 
         @media (max-width:720px) {
             margin-bottom: 5px;
@@ -373,7 +403,7 @@ h3 {
         line-height: 20px;
         max-width: 600px;
         opacity: 0;
-        animation: fadeInLeft  ease-in-out forwards 1.5s;
+        animation: fadeInLeft  ease-in-out forwards 2.0s;
         padding-left: 30px;
 
         
@@ -424,7 +454,7 @@ h3 {
         margin-block-start: 0;
         margin-block-end: 0px;
         opacity: 0;
-        animation: fadeInUp 0.9s ease-in-out forwards;
+        animation: fadeInUp 2.0s ease-in-out forwards;
         animation-delay: 0.2s;  
     }
 
@@ -442,13 +472,13 @@ h3 {
         }
 
         .technologi-img:nth-child(1) {
-            animation-delay: 0.4s;
+            animation-delay: 1.4s;
         }
         .technologi-img:nth-child(2) {
-            animation-delay: 0.6s;
+            animation-delay: 1.6s;
         }
         .technologi-img:nth-child(3) {
-            animation-delay: 0.8s;
+            animation-delay: 1.8s;
         }
     }
 }
@@ -484,7 +514,7 @@ h3 {
     height: 312px;
     border-radius: 30px;
     opacity: 0;
-    animation: fadeInUp 0.9s ease-in-out forwards;
+    animation: fadeInUp 1.2s ease-in-out forwards;
     animation-delay: 1.2s; 
 
     @media (max-width:1200px) {
@@ -536,7 +566,7 @@ h3 {
         font-weight: 400;
         font-size: 18px;
         opacity: 0;
-        animation: fadeInUp 0.9s ease-in-out forwards;
+        animation: fadeInUp 1.2s ease-in-out forwards;
         animation-delay: 1.6s; 
         cursor: pointer;
         text-decoration: none;
@@ -555,7 +585,7 @@ h3 {
         font-weight: 400;
         font-size: 18px;
         opacity: 0;
-        animation: fadeInUp 0.9s ease-in-out forwards;
+        animation: fadeInUp 1.2s ease-in-out forwards;
         animation-delay: 1.8s; 
         cursor: pointer;
         text-decoration: none;
@@ -605,7 +635,7 @@ h3 {
         font-weight: 400;
         font-size: 18px;
         opacity: 0;
-        animation: fadeInUp 0.9s ease-in-out forwards;
+        animation: fadeInUp 1.2s ease-in-out forwards;
         animation-delay: 1.6s; 
         cursor: pointer;
         text-decoration: none;
@@ -624,7 +654,7 @@ h3 {
         font-weight: 400;
         font-size: 18px;
         opacity: 0;
-        animation: fadeInUp 0.9s ease-in-out forwards;
+        animation: fadeInUp 1.2s ease-in-out forwards;
         animation-delay: 1.8s; 
         cursor: pointer;
         text-decoration: none;

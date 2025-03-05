@@ -1,13 +1,19 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+
 section {
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 100%;   
-    padding: 190px 0px 0px 40px;
+    padding: 0px 0px 0px 40px;
     color: white;
     line-height: 2.5;  
     text-align: center; 
-    min-height: 82vh;
+    min-height: 100vh;
     align-items: center;
     text-align: center;
 
@@ -34,14 +40,13 @@ section {
     }
 
     
-    @media (min-height: 2500px) {
-        min-height: 82vh;
-    }
 
 }
 
 h1 {
     font-size: 60px;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 p {

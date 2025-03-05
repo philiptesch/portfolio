@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, AfterViewInit  } from '@angular/core';
 import { LanguageService } from '../../main-content/services/language.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { LanguageService } from '../../main-content/services/language.service';
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss'
 })
-export class ImprintComponent {
+export class ImprintComponent implements AfterViewInit {
 
   isEnglish:boolean =false;
   clicked: string = ''; 
@@ -21,6 +21,14 @@ export class ImprintComponent {
     this.languageService.isEnglish$.subscribe((status) => {
       this.isEnglish = status; 
     });
+  }
+
+
+  ngAfterViewInit() {
+    let element = document.getElementById('imprint');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
 

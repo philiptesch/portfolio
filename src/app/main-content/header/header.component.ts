@@ -49,6 +49,7 @@ export class HeaderComponent {
     this.screenWidth = window.innerWidth;
     if (this.screenWidth >= 720) {
       this.isMenuOpen = false;
+       this.menuBarIcon = 'Property 1=default.png'
       
     }
   }
@@ -131,7 +132,6 @@ export class HeaderComponent {
 
 openMenuBar() {
   this.isMenuOpen = !this.isMenuOpen;
-
   if (this.isMenuOpen) {
     this.menuBarIcon = 'close.png'
   } else {

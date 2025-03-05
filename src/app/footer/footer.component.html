@@ -4,8 +4,12 @@
 
 <main>
     <div class="name-and-legal-notes">
-        <a [ngClass]="{'none': isEnglish}" [routerLink]="'/terms/imprint'" class="legal-Notes"  href="#"> imprint</a>
-        <a [ngClass]="{'none': !isEnglish}" [routerLink]="'/terms/imprint'" class="legal-Notes"  href="#"> Impressum</a>
+        <a [ngClass]="{'none': isEnglish}" [routerLink]="'/terms/imprint'" fragment="imprint" class="legal-Notes">
+            imprint
+        </a>
+        <a [ngClass]="{'none': !isEnglish}" [routerLink]="'/terms/imprint'" fragment="imprint" class="legal-Notes">
+            Impressum
+        </a>
         <a  href=""> © Philip Tesch </a>
     </div>
 

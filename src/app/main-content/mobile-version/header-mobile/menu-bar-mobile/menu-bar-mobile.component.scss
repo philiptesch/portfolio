@@ -10,12 +10,15 @@ div {
     right: 0;
     justify-content: center;
     display: flex;
-    transition: transform 0.4sease-in-out, opacity 0.4sease-in-out;
+    z-index: 0;  
+    transform: scale(0.95); 
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, z-index 0s 0.5s;
 
 
     >img {
         width: 360px;
-        height: 390px;
+        height: 280px;
+
 
         @media (max-width: 400px) {
             width: 255px;
@@ -25,9 +28,13 @@ div {
     }
 
 
+}
 
-
-
+.show {
+    opacity: 1 !important;
+    z-index: 10;
+    transform: scale(1);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, z-index 0s; 
 }
 
 
@@ -38,13 +45,21 @@ div {
     align-items: center;
     flex-direction: column;
     gap: 40px;
-    margin: 60px;
+    margin: 0px;
+
+    @media (max-width: 400px) {
+        gap: 15px;
+        margin: 50px;
+        
+
+    }
+
 
     a {
-        text-decoration: none;
-        color: black;
-        font-weight: 400;
-        font-size: 22px;
+        text-decoration: none ; 
+        color: black ;
+        font-weight: 400 ;
+        font-size: 22px ;
         
 
         &:hover {
@@ -100,7 +115,7 @@ div {
 
 
 .focus {
-     color: white;
+     color: white !important;
 
 }
 

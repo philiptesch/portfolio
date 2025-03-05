@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, AfterViewInit  } from '@angular/core';
 import { LanguageService } from '../../main-content/services/language.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { LanguageService } from '../../main-content/services/language.service';
   templateUrl: './privacy-policy.component.html',
   styleUrl: './privacy-policy.component.scss'
 })
-export class PrivacyPolicyComponent {
+export class PrivacyPolicyComponent implements AfterViewInit {
 
   isEnglish:boolean =false;
       constructor(private languageService: LanguageService) {}
@@ -19,6 +19,18 @@ export class PrivacyPolicyComponent {
           this.languageService.isEnglish$.subscribe((status) => {
             this.isEnglish = status; 
           });
+        }
+
+        ngAfterViewInit() {
+          let element = document.getElementById('privacy-policy');
+          let elementEnglish = document.getElementById('privacy-policy-english');
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+
+          if (elementEnglish) {
+            elementEnglish.scrollIntoView({ behavior: 'smooth' });
+          }
         }
   
   

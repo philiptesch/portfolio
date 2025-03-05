@@ -16,12 +16,12 @@
     </div>
 
 <div class="imgSection">
-<div  [ngClass]="{'none': isMenuOpen}"class="profil-img-content"  data-aos="fade-down">
-    <img  class="profile-picture-img" src="assets/img/profilbild.png" alt="">
+<div  class="profil-img-content"data-aos="fade-down">
+    <img  [ngClass]="{'isVisible': isMenuOpen}" class="profile-picture-img" src="assets/img/profilbild.png" alt="">
+    <app-menu-bar-mobile [ngClass]="{'show': isMenuOpen}"  *ngIf="isMenuOpen && screenWidth < 720" [isMenuOpen]="isMenuOpen"></app-menu-bar-mobile>
 
 </div>
 
-<app-menu-bar-mobile  *ngIf="isMenuOpen && screenWidth < 720" [isMenuOpen]="isMenuOpen"></app-menu-bar-mobile>
 
 </div>
 

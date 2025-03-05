@@ -1,3 +1,7 @@
+
+
+
+
 .desktop-width-view {
     display: flex;
     justify-content: center;
@@ -11,4 +15,22 @@
 .fixed {
     position: fixed;
     width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #89BCD9;
+}
+
+app-footer {
+    background-color: #89bcd9;
+    display: flex;
+    justify-content: center;
+}
+
+
+app-imprint {
+    display: flex;
+    justify-content: center;
 }

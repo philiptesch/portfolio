@@ -18,6 +18,8 @@ export class AppComponent {
 
   constructor(private router: Router) {}
 
+  
+
   showMenuBar(): boolean {
     return this.router.url.includes('/terms/imprint') || this.router.url.includes('/terms/privacy-policy');
   }

@@ -1,3 +1,15 @@
+app-menu-bar {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    z-index: 999999;
+    overflow-x: hidden;
+    background-color: #89bcd9;
+    
+}
+
+
 header {
     padding: 75px 0px 0px 0;
     display: flex;
@@ -5,7 +17,7 @@ header {
     gap: 121px;
     justify-content: center;
     margin-bottom: 60px;
-
+    height: 100vh;
 
     @media (max-width: 1650px) {
         padding: 20px 20px 0px 20px;
@@ -25,6 +37,7 @@ header {
     @media (max-width: 720px) {
         flex-direction: column;
         gap: 0px;
+        padding: 0px 20px 0px 20px;
     }
 
     @media (max-height: 700px) {
@@ -46,14 +59,17 @@ header {
         border-radius: 19% 62% 100% 90%;
         min-width: 700px;
         height: 800px;
-        transition: background-image 0.5s ease-in-out, opacity 0.8s ease-in-out;
+        transition: background-image 0.9s ease-in-out, opacity 1s ease-in-out;
         opacity: 1;
         transform: translateZ(0);
 
         &:hover {
             background-image: url(../../../assets/img/Property\ 1=hover.png);
             border-radius: 69% 80% 100% 90%;
+            
+      
         }
+
 
 
 
@@ -186,6 +202,8 @@ header {
 
     @media (max-width: 720px) {
         margin-top: 0px;  
+        height: 70px;
+        width: 40px;
         }
 
 }
@@ -206,8 +224,14 @@ header {
 
 
         @media (max-width: 720px) {
-            margin-top: 30px;
+            margin-top: 20px;
 
+
+        }
+
+        @media (max-height: 700px) {
+            margin-top: -40px;
+            margin-bottom: 50px;
 
         }
 
@@ -236,6 +260,7 @@ header {
                 font-weight: 400;
                 margin-block-start: 20px;
                 margin-block-end: 0;
+                text-align: center;
     
             }
 
@@ -269,6 +294,7 @@ header {
 
             @media (max-width: 600px) {
                 font-size: 30px;
+                text-align: center;
             }
     
             @media (max-width: 450px) {
@@ -384,6 +410,29 @@ header {
 
 
 
+    app-menu-bar-mobile {
+        position: relative; 
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        z-index: -1;
+        transform: translateY(-20px);
+        transition: opacity 0.4s ease-out, transform 0.4s ease-out, z-index 0s 0.4s;
+         will-change: opacity, transform;
+    }
+    
+    app-menu-bar-mobile.show {
+        opacity: 1;
+        z-index: 100;
+        transform: translateY(0);
+        transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    }
+    
+
+
 
 .hidden {
    visibility: hidden!important;
@@ -393,6 +442,17 @@ header {
     display: none !important;
   }
 
+  .menuBarMobileOpen {
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+
+
+  .isVisible {
+    z-index: -10;
+    opacity: 0;
+  }
 
   .focus {
     color: white;

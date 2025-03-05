@@ -1,10 +1,11 @@
 <section>
+
+    <div class="headline">
     <h1  [ngClass]="{'none': isEnglish}"class="fontAnt">Why Me</h1>
     <h1 [ngClass]="{'none': !isEnglish}" class="fontAnt">Warum ich</h1>
-</section>
-
+    </div>
 <main>
-<div class="about-me-lovation-info">
+<div class="about-me-location-info">
     <div [ngClass]="!isEnglish ? 'located-city-english' : 'located-city'">
         <img src="assets/img/Group 60 (1).png" alt="" >
         <div>
@@ -62,3 +63,4 @@
     
 
 </main>
+</section>
