@@ -157,6 +157,7 @@ color: #F8F5EC;
 
         @media (max-width: 850px) {
           gap: 32px;
+          justify-content: center;
       }
 
 
@@ -354,6 +355,9 @@ display: none;
 
     @media (max-width: 1090px) {
       font-size: 16px;
+      margin-top: 50px;
+      max-width: 280px;
+  
   }
 
   @media (max-width: 1090px) {
