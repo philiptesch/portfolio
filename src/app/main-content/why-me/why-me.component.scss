@@ -3,7 +3,7 @@ section {
     justify-content: center;
     padding: 140px 0px 0px 40px;
     overflow-x: hidden;
-    max-width: 1920px;
+    max-width: 1440px;
     width: 100%;
     flex-direction: column;
 
@@ -36,7 +36,6 @@ section {
 
 main {
     display: flex;
-    padding: 60px 130px 0px 130px;
     justify-content: space-between;
     align-items: center;
 
@@ -481,7 +480,7 @@ main {
 }
 
 .go-to-messenger {
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: flex-end;
 

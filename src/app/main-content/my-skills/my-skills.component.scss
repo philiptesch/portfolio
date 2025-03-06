@@ -4,7 +4,7 @@ section {
     margin-bottom: 50px;
     flex-direction:column ;
     overflow-x: hidden;
-    max-width: 1920px;
+    max-width: 1440px;
   
 
 
@@ -121,7 +121,7 @@ color: #F8F5EC;
 .my-skills-content {
     display: flex;
     justify-content: space-between;
-    padding: 60px 130px 0px 130px;
+    padding: 60px 0px 0px 0px;
 
     @media (max-width: 1450px) {
       justify-content: center;
@@ -138,7 +138,10 @@ color: #F8F5EC;
   flex-wrap: wrap;
   margin-right: 0px;
 }
-@media (max-height: 700px) {
+
+
+
+@media (max-height: 900px) {
   padding: 0px 0px 0px 0px;
 }
 
@@ -149,7 +152,8 @@ color: #F8F5EC;
         gap: 40px;
         flex: 1;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
+      
 
         @media (max-width: 850px) {
           gap: 32px;
@@ -580,7 +584,7 @@ position: relative;
   top: -191px;
 }
 
-@media (max-height: 700px) {
+@media (max-height: 900px) {
   left: -200px;
   top: -50px;
 
@@ -671,7 +675,7 @@ display: none;
   
     }
 
-    @media (max-height: 700px) {
+    @media (max-height: 900px) {
       margin-bottom: 50px;
       
   }

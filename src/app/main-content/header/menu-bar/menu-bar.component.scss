@@ -7,7 +7,7 @@ html {
 .menu-bar-desktop {
     background-color: #89BCD9;
     height: 110px;
-    max-width: 1920px;
+    max-width: 1440px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -24,7 +24,7 @@ html {
     .menu{
         padding: 10px 0px 0px 50px;
         display: flex;
-        gap: 150px;
+        gap: 50px;
         justify-content: center;
         transform: translateY(-50px);
         animation: menuIn 1s ease-out forwards;
@@ -110,7 +110,7 @@ html {
             
             
             @media (max-width: 1450px) {
-                gap: 40px;
+                gap: 80px;
         
             }
 
@@ -133,6 +133,7 @@ html {
             font-weight: 500;
             font-size: 26px;
             cursor: pointer;
+            text-align: center;
             
     
             &:hover {

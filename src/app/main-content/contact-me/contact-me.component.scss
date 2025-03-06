@@ -46,6 +46,12 @@ main {
         margin-block-start: 80px;
      }
 
+     @media (max-width:400px) {
+        max-width: 200px;
+        text-align: center;
+     }
+
+
      @media (max-height: 700px) {
         margin-block-start: 0px;
       
@@ -58,7 +64,7 @@ main {
 
 img {
     position: relative;
-    left: 500px;
+    left: 400px;
     height: 90px;
     width: 40px;
 
@@ -89,6 +95,10 @@ img {
         flex-direction: column-reverse;
      }
 
+
+     @media (max-width:400px) {
+        margin-left: 20px;
+     }
      @media (max-height: 700px) {
         gap: 20px;
         
@@ -426,6 +436,9 @@ input.email-input-Field:-webkit-autofill {
 
      }
 
+     @media (max-width:400px) {
+        margin-left: 10px;
+     }
 
     span {
         color: #F8F5EC;        

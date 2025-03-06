@@ -37,7 +37,7 @@ header {
     @media (max-width: 720px) {
         flex-direction: column;
         gap: 0px;
-        padding: 0px 20px 0px 20px;
+        padding: 10üxx 20px 0px 20px;
     }
 
     @media (max-height: 700px) {
@@ -86,12 +86,12 @@ header {
 
 
         @media (max-width: 950px) {
-            min-width: 465px;
+            min-width: 490px;
             height: 550px;
         }
 
         @media (max-width: 850px) {
-            min-width: 300px;
+            min-width: 370px;
             height: 380px;
         }
 
@@ -102,14 +102,14 @@ header {
             justify-content: center;
             position: relative;
             flex-direction: column;
-            min-width: 390px;
+            min-width: 430px;
             height: 410px;
         }
 
 
         @media (max-width: 400px) {
-            min-width: 260px;
-            height: 360px;
+            min-width: 290px;
+        height: 375px;
         }
 
       
@@ -146,34 +146,34 @@ header {
             
             
             @media (max-width: 950px) {
-                width: 360px;
-                height: 530px;
+                width: 400px;
+                height: 535px;
                 top: 0px;
-                left: 44px;
+                left: 36px;
             }
 
             @media (max-width: 850px) {
-                width: 220px;
-                height: 327px;
-                top: 23px;
+                width: 290px;
+                height: 360px;
+                top: 20px;
                 left: 30px;
             }
 
             @media (max-width: 720px) {
-                width: 279px;
+                width: 335px;
                 height: 370px;
                 z-index: 1;
                 border-radius: 34%;
                 margin-right: 30px;
-                left: 48px;
+                left: 39px;
                 top: 40px;
 
             }
             @media (max-width: 400px) {
-                width: 210px;
-                height: 318px;
+                width: 280px;
+                height: 345px;
                 margin-right: 0px;
-                left: 16px;
+                left: -5px;
                 top: 0px;
             
 
